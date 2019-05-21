@@ -28,4 +28,14 @@ public enum ScoreEnum {
     public void setScore(int score) {
         this.score = score;
     }
+
+    public static ScoreEnum getScoreEnum(int score) {
+        switch (score) {
+            case 1 : return SCORE_1;
+            case 2 : return SCORE_2;
+            case 3 : return SCORE_3;
+            case 4 : return SCORE_4;
+            default: return SCORE_5;
+        }
+    }
 }

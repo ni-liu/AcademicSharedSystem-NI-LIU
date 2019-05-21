@@ -2,7 +2,6 @@ package com.javaee.ass.entity.blog;
 
 import com.javaee.ass.entity.enums.BlogAuthorityEnum;
 import org.apache.ibatis.type.Alias;
-import org.springframework.core.annotation.AliasFor;
 
 import java.sql.Date;
 import java.util.Objects;
@@ -15,10 +14,10 @@ public class BlogDO {
     private String fileDownload;
     private Date launchTime;
     private BlogAuthorityEnum authority;
+    private String userId;
 
     public BlogDO() {
     }
-
 
     public int getPkId() {
         return this.pkId;
@@ -42,6 +41,10 @@ public class BlogDO {
 
     public BlogAuthorityEnum getAuthority() {
         return this.authority;
+    }
+
+    public String getUserId() {
+        return this.userId;
     }
 
     public void setPkId(int pkId) {
@@ -68,6 +71,10 @@ public class BlogDO {
         this.authority = authority;
     }
 
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
     public boolean equals(final Object o) {
         if (o == this) return true;
         if (!(o instanceof BlogDO)) return false;
@@ -91,7 +98,10 @@ public class BlogDO {
             return false;
         final Object this$authority = this.authority;
         final Object other$authority = other.authority;
-        return Objects.equals(this$authority, other$authority);
+        if (!Objects.equals(this$authority, other$authority)) return false;
+        final Object this$userId = this.userId;
+        final Object other$userId = other.userId;
+        return Objects.equals(this$userId, other$userId);
     }
 
     protected boolean canEqual(final Object other) {
@@ -112,10 +122,12 @@ public class BlogDO {
         result = result * PRIME + ($launchTime == null ? 43 : $launchTime.hashCode());
         final Object $authority = this.authority;
         result = result * PRIME + ($authority == null ? 43 : $authority.hashCode());
+        final Object $userId = this.userId;
+        result = result * PRIME + ($userId == null ? 43 : $userId.hashCode());
         return result;
     }
 
     public String toString() {
-        return "BlogDO(pkId=" + this.pkId + ", blogTitle=" + this.blogTitle + ", blogContent=" + this.blogContent + ", fileDownload=" + this.fileDownload + ", launchTime=" + this.launchTime + ", authority=" + this.authority + ")";
+        return "BlogDO(pkId=" + this.pkId + ", blogTitle=" + this.blogTitle + ", blogContent=" + this.blogContent + ", fileDownload=" + this.fileDownload + ", launchTime=" + this.launchTime + ", authority=" + this.authority + ", userId=" + this.userId + ")";
     }
 }

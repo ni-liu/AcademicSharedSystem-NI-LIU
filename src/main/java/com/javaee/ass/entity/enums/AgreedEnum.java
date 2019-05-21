@@ -8,14 +8,16 @@ package com.javaee.ass.entity.enums;
  */
 public enum AgreedEnum {
 
-    AGREED_NO(1) ,
-    AGREED_WAITING(2) ,
-    AGREED_YES(3);
+    AGREED_NO(1 , "普通课程") ,
+    AGREED_WAITING(2 , "待审核") ,
+    AGREED_YES(3 , "精品课程");
 
     private int agreed;
+    private String context;
 
-    AgreedEnum(int agreed) {
+    AgreedEnum(int agreed, String context) {
         this.agreed = agreed;
+        this.context = context;
     }
 
     public int getAgreed() {
@@ -24,5 +26,21 @@ public enum AgreedEnum {
 
     public void setAgreed(int agreed) {
         this.agreed = agreed;
+    }
+
+    public String getContext() {
+        return context;
+    }
+
+    public void setContext(String context) {
+        this.context = context;
+    }
+
+    public static AgreedEnum getAgreeEnum(int agreed) {
+        switch (agreed) {
+            case 1 : return AgreedEnum.AGREED_NO;
+            case 2 : return AgreedEnum.AGREED_WAITING;
+            default: return AGREED_YES;
+        }
     }
 }

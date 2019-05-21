@@ -1,4 +1,10 @@
-
+* {
+    padding: 0;
+    margin:0;
+}
+a {
+    color: #4e555b;
+}
 .wrapper {
     height: 850px;
 }
@@ -7,5 +13,44 @@
 }
 .main {
     height: 850px;
-    border: 1px solid #000000;
+    /*border: 1px solid #000000;*/
+}
+
+/* main */
+.span-label {
+    margin-top: 10px;
+}
+
+#info-match-search {
+    height: 50px;
+
+}
+
+.row-courses-frame {
+    margin-top: 50px;
+    height: 250px;
+}
+.course-info-frame {
+    height: 250px;
+}
+
+.course-pic {
+    height: 200px;
+    overflow: hidden;
+}
+.img-responsive {
+    height: 100%;
+}
+
+.course-brief {
+     margin-top: 15px;
+    height: 25px;
+}
+
+.table-frame {
+    margin-top: 40px;
+}
+
+.form-container {
+    margin-top: 70px;
 }

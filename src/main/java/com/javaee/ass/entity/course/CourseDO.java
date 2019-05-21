@@ -143,6 +143,13 @@ public class CourseDO {
     }
 
     public String toString() {
-        return "CourseDO(courseId=" + this.courseId + ", courseName=" + this.courseName + ", teacherId=" + this.teacherId + ", majorId=" + this.majorId + ", coursePic=" + this.coursePic + ", courseOutlineDownload=" + this.courseOutlineDownload + ", hasAgreed=" + this.hasAgreed + ", courseInfo=" + this.courseInfo + ")";
+        return "CourseDO(courseId=" + this.courseId +
+                "\n courseName=" + this.courseName +
+                "\n teacherId=" + this.teacherId +
+                "\n majorId=" + this.majorId +
+                "\n coursePic=" + this.coursePic +
+                "\n courseOutlineDownload=" + this.courseOutlineDownload +
+                "\n hasAgreed=" + this.hasAgreed.getContext()+
+                "\n courseInfo=" + this.courseInfo + ")";
     }
 }

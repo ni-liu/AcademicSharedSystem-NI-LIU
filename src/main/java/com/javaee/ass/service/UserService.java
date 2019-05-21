@@ -18,7 +18,7 @@ public class UserService {
         return userDAO.searchByPkId(pkId);
     }
 
-    public String searchNicknameByPkIs(String pkId) {
+    public String searchNicknameByPkId(String pkId) {
         return userDAO.searchNicknameByPkId(pkId);
     }
 }

@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
@@ -17,7 +18,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class WebServletConfig implements WebMvcConfigurer {
 
     @Bean
-    public ViewResolver viewResolver() {
+    public static ViewResolver viewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/views/");
         resolver.setSuffix(".jsp");
@@ -30,8 +31,10 @@ public class WebServletConfig implements WebMvcConfigurer {
      * @return StandardServletMultipartResolver
      */
     @Bean
-    public MultipartResolver multipartResolver() {
-        return new StandardServletMultipartResolver();
+    public static MultipartResolver multipartResolver() {
+        CommonsMultipartResolver resolver = new CommonsMultipartResolver();
+        resolver.setDefaultEncoding("UTF-8");
+        return resolver;
     }
 
     @Override

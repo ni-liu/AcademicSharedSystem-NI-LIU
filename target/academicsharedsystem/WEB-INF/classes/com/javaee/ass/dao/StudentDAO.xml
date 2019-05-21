@@ -34,7 +34,7 @@
 
     <insert id="insert" statementType="CALLABLE">
         {
-            CALL PRO_USER_ROLE_CASCADE(
+            CALL PRO_STU_ROLE_CASCADE(
                 #{pkId , mode = IN} ,
                 #{password , mode = IN} ,
                 #{role , mode = IN} ,

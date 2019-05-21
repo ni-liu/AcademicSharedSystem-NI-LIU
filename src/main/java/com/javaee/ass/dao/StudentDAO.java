@@ -1,7 +1,6 @@
 package com.javaee.ass.dao;
 
 import com.javaee.ass.entity.role.StudentDO;
-import com.javaee.ass.entity.role.UserDO;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Isolation;

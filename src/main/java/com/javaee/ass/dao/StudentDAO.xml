@@ -34,7 +34,7 @@
 
     <insert id="insert" statementType="CALLABLE">
         {
-            CALL PACK_USER_RESIGER.PRO_USER_ROLE_CASCADE(
+            CALL PRO_STU_ROLE_CASCADE(
                 #{pkId , mode = IN} ,
                 #{password , mode = IN} ,
                 #{role , mode = IN} ,
@@ -44,8 +44,4 @@
             )
         }
     </insert>
-
-    <delete id="deleteById" parameterType="String"  >
-        CALL PACK_USER_DELETE.PRO_STUDENT_DELETE(#{pkId ,mode = IN})
-    </delete>
 </mapper>

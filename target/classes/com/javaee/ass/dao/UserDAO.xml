@@ -12,7 +12,6 @@
                 jdbcType="SMALLINT" javaType="com.javaee.ass.entity.enums.RoleEnum"
                 typeHandler="com.javaee.ass.entity.typehandler.RoleEnumTypeHandler"/>
         <result property="nickName" column="NICKNAME"/>
-        <result property="name" column="NAME"/>
     </resultMap>
 
     <select id="searchByPkId" resultMap="userDOMap" parameterType="string">
@@ -26,16 +25,4 @@
         FROM ASS_USER
         WHERE PK_ID = #{pkId}
     </select>
-
-    <insert id="insert" statementType="CALLABLE">
-        {
-          CALL PACK_USER_RESIGER.PRO_USER_ROLE_CASCADE_ADMIN(
-              #{pkId, mode = IN} ,
-              #{password, mode = IN} ,
-              #{role, mode = IN} ,
-              #{nickName, mode = IN},
-              #{name, mode = IN}
-          )
-        }
-    </insert>
 </mapper>
