@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.javaee.ass.dao.CourseDAO">
+    <resultMap id="courseDOMap" type="courseDO">
+        <id property="courseId" column="COURSE_ID"/>
+        <result property="courseName" column="COURSE_NAME"/>
+        <result property="teacherId" column="TEACHER_ID"/>
+        <result property="majorId" column="MAJOR_ID"/>
+        <result property="coursePic" column="COURSE_PIC"/>
+        <result property="courseOutlineDownload" column="COURSE_OUTLINE_DOWNLOAD"/>
+        <result property="hasAgreed" column="HAS_AGREDD"
+                jdbcType="SMALLINT" javaType="com.javaee.ass.entity.enums.AgreedEnum"
+                typeHandler="com.javaee.ass.entity.typehandler.AgreedEnumTypeHandler"/>
+        <result property="courseInfo" column="COURSE_INFO"/>
+    </resultMap>
+
+    <select id="searchByPkId" parameterType="string" resultMap="courseDOMap">
+        SELECT
+               COURSE_ID, COURSE_NAME, TEACHER_ID, MAJOR_ID, COURSE_PIC, COURSE_OUTLINE_DOWNLOAD, HAS_AGREDD, COURSE_INFO
+        FROM ASS_COURSE
+        WHERE COURSE_ID = #{pkId}
+    </select>
+
+    <insert id="insert">
+        INSERT INTO ASS_COURSE
+            (COURSE_ID, COURSE_NAME, TEACHER_ID, MAJOR_ID, COURSE_PIC, COURSE_OUTLINE_DOWNLOAD, HAS_AGREDD, COURSE_INFO)
+        VALUES
+            (
+                #{courseId} ,
+                #{courseName} ,
+                #{teacherId} ,
+                #{majorId} ,
+                #{coursePic} ,
+                #{courseOutlineDownload} ,
+                #{hasAgreed} ,
+                #{courseInfo}
+            )
+    </insert>
+
+    <select id="listCoursesByMajorId" resultMap="courseDOMap">
+        SELECT * FROM
+            (
+                SELECT A.*, ROWNUM RN
+                FROM (SELECT * FROM ASS_COURSE WHERE MAJOR_ID = #{majorId}) A
+                WHERE ROWNUM  &lt;= #{pageNow} * #{pageSize}
+            ) as R2
+        WHERE RN &gt;= 1 + (#{pageNow} - 1) * #{pageSize}
+    </select>
+
+    <select id="listCoursesByTeacherId" resultMap="courseDOMap">
+        SELECT * FROM
+            (
+                SELECT A.*, ROWNUM RN
+                FROM (SELECT * FROM ASS_COURSE WHERE TEACHER_ID = #{teacherId}) A
+                WHERE ROWNUM  &lt;= #{pageNow} * #{pageSize}
+            )
+        WHERE RN &gt;= 1 + (#{pageNow} - 1) * #{pageSize}
+    </select>
+
+    <select id="listAgreedCourses" resultMap="courseDOMap">
+        SELECT * FROM
+            (
+                SELECT A.*, ROWNUM RN
+                FROM (SELECT * FROM ASS_COURSE WHERE HAS_AGREDD = 3) A
+                WHERE ROWNUM  &lt;= #{pageNow} * #{pageSize}
+            )
+        WHERE RN &gt;= 1 + (#{pageNow} - 1) * #{pageSize}
+    </select>
+
+    <select id="listAll" parameterType="int" resultMap="courseDOMap">
+        SELECT * FROM
+        (
+        SELECT A.*, ROWNUM RN
+            FROM (SELECT * FROM ASS_COURSE) A
+        WHERE ROWNUM  &lt;= #{pageNow} * #{pageSize}
+        )
+        WHERE RN &gt;= 1 + (#{pageNow} - 1) * #{pageSize}
+    </select>
+</mapper>
