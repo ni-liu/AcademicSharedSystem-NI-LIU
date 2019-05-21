@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.javaee.ass.dao.UserDAO">
+
+    <resultMap id="userDOMap" type="userDO">
+        <id property="pkId" column="PK_ID"/>
+        <result property="password" column="PASSWORD"/>
+        <result property="role" column="ROLE"
+                jdbcType="SMALLINT" javaType="com.javaee.ass.entity.enums.RoleEnum"
+                typeHandler="com.javaee.ass.entity.typehandler.RoleEnumTypeHandler"/>
+        <result property="nickName" column="NICKNAME"/>
+    </resultMap>
+
+    <select id="searchByPkId" resultMap="userDOMap" parameterType="string">
+        SELECT PK_ID, PASSWORD, ROLE, NICKNAME
+        FROM ASS_USER
+        WHERE PK_ID = #{pkId}
+    </select>
+
+    <select id="searchNicknameByPkId" parameterType="string" resultType="string">
+        SELECT NICKNAME
+        FROM ASS_USER
+        WHERE PK_ID = #{pkId}
+    </select>
+</mapper>
