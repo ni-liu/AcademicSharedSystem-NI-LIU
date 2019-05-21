@@ -18,7 +18,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class WebServletConfig implements WebMvcConfigurer {
 
     @Bean
-    public static ViewResolver viewResolver() {
+    public ViewResolver viewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/views/");
         resolver.setSuffix(".jsp");
@@ -31,8 +31,8 @@ public class WebServletConfig implements WebMvcConfigurer {
      * @return StandardServletMultipartResolver
      */
     @Bean
-    public static MultipartResolver multipartResolver() {
-        CommonsMultipartResolver resolver = new CommonsMultipartResolver();
+    public MultipartResolver multipartResolver() {
+        CommonsMultipartResolver resolver = new CommonsMultipartResolver();;
         resolver.setDefaultEncoding("UTF-8");
         return resolver;
     }

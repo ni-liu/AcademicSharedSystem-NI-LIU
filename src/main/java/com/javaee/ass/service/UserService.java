@@ -21,4 +21,21 @@ public class UserService {
     public String searchNicknameByPkId(String pkId) {
         return userDAO.searchNicknameByPkId(pkId);
     }
+
+    /**
+     * 根据主键查询昵称
+     * @param pkId 主键值
+     * @param newNickName 新的昵称
+     * @return 更新成功返回true 否则返回false
+     */
+    public boolean updateNickName(String pkId , String newNickName) {
+        boolean hasUpdated = false;
+        try {
+            userDAO.updateNickName(pkId , newNickName);
+            hasUpdated = true;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return hasUpdated;
+    }
 }

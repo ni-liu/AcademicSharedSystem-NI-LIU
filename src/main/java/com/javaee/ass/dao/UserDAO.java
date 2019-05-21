@@ -16,4 +16,8 @@ public interface UserDAO extends GeneralDAO<UserDO> {
 
     @Transactional(propagation = Propagation.REQUIRES_NEW,isolation = Isolation.SERIALIZABLE)
     String searchNicknameByPkId(@Param("pkId") String pkId);
+
+
+    @Transactional(propagation = Propagation.REQUIRES_NEW,isolation = Isolation.SERIALIZABLE)
+    boolean updateNickName(@Param("pkId") String pkId, @Param("newNickName") String newNickName);
 }

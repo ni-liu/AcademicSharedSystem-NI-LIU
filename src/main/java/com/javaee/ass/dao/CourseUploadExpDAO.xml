@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.javaee.ass.dao.CourseUploadExpDAO">
+
+    <resultMap id="courseUploadExpMapDO" type="courseUploadExpDO">
+        <id property="pkId" column="PK_ID"/>
+        <result property="stuId" column="STU_ID"/>
+        <result property="expId" column="EXP_ID"/>
+        <result property="score" column="SCORE" javaType="com.javaee.ass.entity.enums.ScoreEnum"
+                jdbcType="SMALLINT" typeHandler="com.javaee.ass.entity.typehandler.ScoreEnumTypeHandler"/>
+        <result property="upload" column="UPLOAD"/>
+        <result property="uploadTime" column="UPLOAD_TIME" javaType="java.sql.Date" jdbcType="DATE"/>
+    </resultMap>
+
+    <select id="searchByPkId" resultMap="courseUploadExpMapDO">
+        SELECT PK_ID, STU_ID, EXP_ID, SCORE, UPLOAD, UPLOAD_TIME
+        FROM ASS_COURSE_UPLOADEXP
+        WHERE PK_ID = #{pkId}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true">
+        INSERT INTO
+        ASS_COURSE_UPLOADEXP(STU_ID, EXP_ID, SCORE, UPLOAD, UPLOAD_TIME)
+        VALUES (
+                #{stuId} ,
+                #{expId} ,
+                #{score} ,
+                #{upload} ,
+                TO_DATE(#{uploadTime} , 'yyyy-mm-dd hh24:mi:ss')
+               )
+    </insert>
+
+    <select id="listExpDOByExpId" resultMap="courseUploadExpMapDO">
+        SELECT * FROM
+            (
+                SELECT A.*, ROWNUM RN
+                FROM (SELECT
+                          PK_ID, STU_ID, EXP_ID, SCORE, UPLOAD, UPLOAD_TIME
+                      FROM ASS_COURSE_UPLOADEXP
+                      WHERE EXP_ID = #{expId}) A
+                WHERE ROWNUM  &lt;= #{pageNow} * #{pageSize}
+            )
+        WHERE RN &gt;= 1 + (#{pageNow} - 1) * #{pageSize}
+    </select>
+
+    <update id="updateScoreByPkId">
+        UPDATE ASS_COURSE_UPLOADEXP
+        SET SCORE = #{newScore}
+        WHERE PK_ID = #{pkId}
+    </update>
+
+</mapper>

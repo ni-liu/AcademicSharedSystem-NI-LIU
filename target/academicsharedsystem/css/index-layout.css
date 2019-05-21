@@ -46,6 +46,11 @@ a {
      margin-top: 15px;
     height: 25px;
 }
+.pdf_view{
+    margin-top: 15px;
+    margin-left: 0px;
+    height: 1000px;
+}
 
 .table-frame {
     margin-top: 40px;

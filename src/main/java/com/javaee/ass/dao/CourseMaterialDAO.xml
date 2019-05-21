@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.javaee.ass.dao.CourseMaterialDAO">
+
+    <resultMap id="courseExpMap" type="courseMaterialDO">
+        <id property="pkId" column="PK_ID"/>
+        <result property="courseId" column="COURSE_ID"/>
+        <result property="fileName" column="EXP_NAME"/>
+        <result property="download" column="DOWNLOAD"/>
+    </resultMap>
+
+    <resultMap id="courseTestPaperMap" type="courseMaterialDO">
+        <id property="pkId" column="PK_ID"/>
+        <result property="courseId" column="COURSE_ID"/>
+        <result property="fileName" column="PAPER_NAME"/>
+        <result property="download" column="DOWNLOAD"/>
+    </resultMap>
+
+    <insert id="insert" useGeneratedKeys="true">
+        INSERT INTO
+            ${type}
+            VALUES(#{courseId} , #{fileName} , #{download})
+    </insert>
+
+    <select id="listCourseExps" resultMap="courseExpMap">
+        SELECT * FROM
+            (
+                SELECT A.*, ROWNUM RN
+                FROM (SELECT * FROM ASS_COURSE_EXP WHERE COURSE_ID = #{courseId}) A
+                WHERE ROWNUM  &lt;= #{pageNow} * #{pageSize}
+            )
+        WHERE RN &gt;= 1 + (#{pageNow} - 1) * #{pageSize}
+    </select>
+
+    <select id="listCoursePaperTests" resultMap="courseTestPaperMap">
+        SELECT * FROM
+            (
+                SELECT A.*, ROWNUM RN
+                FROM (SELECT * FROM ASS_COURSE_TESTPAPER WHERE COURSE_ID = #{courseId}) A
+                WHERE ROWNUM  &lt;= #{pageNow} * #{pageSize}
+            )
+        WHERE RN &gt;= 1 + (#{pageNow} - 1) * #{pageSize}
+    </select>
+</mapper>

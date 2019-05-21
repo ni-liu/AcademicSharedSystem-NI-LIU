@@ -3,6 +3,7 @@ package com.javaee.ass.service;
 import com.javaee.ass.dao.CourseDAO;
 import com.javaee.ass.entity.course.CourseDO;
 import com.javaee.ass.entity.enums.FileTypeEnum;
+import com.javaee.ass.entity.params.CourseBasicParam;
 import com.javaee.ass.utils.FinalVariablesUtils;
 import com.javaee.ass.utils.OSSOperationUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +27,8 @@ public class CourseService {
      * @param pageNow 第几页
      * @return 返回结果集
      */
-    public List<CourseDO> listAllByPageNow(int pageNow) {
-        List<CourseDO> list = null;
+    public List<CourseBasicParam> listAllByPageNow(int pageNow) {
+        List<CourseBasicParam> list = null;
         try {
             list = courseDAO.listAll(pageNow , FinalVariablesUtils.COURSE_PAGE_SIZE);
         } catch (Exception ex) {
@@ -47,31 +48,33 @@ public class CourseService {
 
     /**
      * 插入一条课程记录 保证课程信息完整性(课程图片和课程大纲)
-     * @param course 课程记录
+     * @param picFile 图片 tmp
+     * @param course 课程记录 tmp
      * @return 插入成功返回true 否则放回false
      */
     public boolean insert(CourseDO course , File picFile , File courseOutline) {
         boolean hasInserted = false;
-        if (course.getCoursePic() == null) {
+        if (picFile == null) {
             course.setCoursePic(FinalVariablesUtils.DEFAULT_COURSE_PIC_OSS_URL);
         } else {
             // 图片上传OSS 并获取URL
-            course.setCoursePic(OSSOperationUtils.uploadCourseGeneralFile(
+            course.setCoursePic(OSSOperationUtils.uploadCourseFile(
                     FileTypeEnum.COURSE_PIC ,
                     picFile ,
                     course.getCourseId()
             ));
         }
-        if (course.getCourseOutlineDownload() == null) {
+        if (courseOutline == null) {
             course.setCourseOutlineDownload(FinalVariablesUtils.DEFAULT_COURSE_OUTLINE_OSS_URL);
         } else {
             // 教学大纲上传OSS 并获取URL
-            course.setCourseOutlineDownload(OSSOperationUtils.uploadCourseGeneralFile(
+            course.setCourseOutlineDownload(OSSOperationUtils.uploadCourseFile(
                     FileTypeEnum.COURSE_OUTLINES ,
                     courseOutline ,
                     course.getCourseId()
             ));
         }
+        System.out.println("Service层" + course.toString());
         try {
             hasInserted = courseDAO.insert(
                     course.getCourseId(),
@@ -96,8 +99,8 @@ public class CourseService {
      * @param pageNow 第几页
      * @return 结果集
      */
-    public List<CourseDO> listRelevantCourseByMajorId(String majorId , int pageNow) {
-        List<CourseDO> list = null;
+    public List<CourseBasicParam> listRelevantCourseByMajorId(String majorId , int pageNow) {
+        List<CourseBasicParam> list = null;
         try {
             list = courseDAO.listCoursesByMajorId(majorId , pageNow , FinalVariablesUtils.COURSE_PAGE_SIZE);
         } catch (Exception ex) {
@@ -112,8 +115,8 @@ public class CourseService {
      * @param pageNow 第几页
      * @return 结果集
      */
-    public List<CourseDO> listRelevantCourseByTeacherId(String teacherId , int pageNow) {
-        List<CourseDO> list = null;
+    public List<CourseBasicParam> listRelevantCourseByTeacherId(String teacherId , int pageNow) {
+        List<CourseBasicParam> list = null;
         try {
             list = courseDAO.listCoursesByTeacherId(teacherId , pageNow , FinalVariablesUtils.COURSE_PAGE_SIZE);
         } catch (Exception ex) {
@@ -127,8 +130,8 @@ public class CourseService {
      * @param pageNow 第几页
      * @return 结果集
      */
-    public List<CourseDO> listAgreedCourses(int pageNow) {
-        List<CourseDO> list= null;
+    public List<CourseBasicParam> listAgreedCourses(int pageNow) {
+        List<CourseBasicParam> list= null;
         try {
             list = courseDAO.listAgreedCourses(pageNow , FinalVariablesUtils.COURSE_PAGE_SIZE);
         } catch (Exception ex) {
@@ -136,5 +139,7 @@ public class CourseService {
         }
         return list;
     }
+
+
 
 }

@@ -12,6 +12,7 @@ public class CourseUploadExpDO {
     private String stuId;
     private int expId;
     private ScoreEnum score;
+    private String upload;
     private Date uploadTime;
 
     public CourseUploadExpDO() {
@@ -31,6 +32,10 @@ public class CourseUploadExpDO {
 
     public ScoreEnum getScore() {
         return this.score;
+    }
+
+    public String getUpload() {
+        return this.upload;
     }
 
     public Date getUploadTime() {
@@ -53,6 +58,10 @@ public class CourseUploadExpDO {
         this.score = score;
     }
 
+    public void setUpload(String upload) {
+        this.upload = upload;
+    }
+
     public void setUploadTime(Date uploadTime) {
         this.uploadTime = uploadTime;
     }
@@ -70,6 +79,9 @@ public class CourseUploadExpDO {
         final Object this$score = this.score;
         final Object other$score = other.score;
         if (!Objects.equals(this$score, other$score)) return false;
+        final Object this$upload = this.upload;
+        final Object other$upload = other.upload;
+        if (!Objects.equals(this$upload, other$upload)) return false;
         final Object this$uploadTime = this.uploadTime;
         final Object other$uploadTime = other.uploadTime;
         return Objects.equals(this$uploadTime, other$uploadTime);
@@ -88,12 +100,14 @@ public class CourseUploadExpDO {
         result = result * PRIME + this.expId;
         final Object $score = this.score;
         result = result * PRIME + ($score == null ? 43 : $score.hashCode());
+        final Object $upload = this.upload;
+        result = result * PRIME + ($upload == null ? 43 : $upload.hashCode());
         final Object $uploadTime = this.uploadTime;
         result = result * PRIME + ($uploadTime == null ? 43 : $uploadTime.hashCode());
         return result;
     }
 
     public String toString() {
-        return "CourseUploadExpDO(pkId=" + this.pkId + ", stuId=" + this.stuId + ", expId=" + this.expId + ", score=" + this.score + ", uploadTime=" + this.uploadTime + ")";
+        return "CourseUploadExpDO(pkId=" + this.pkId + ", stuId=" + this.stuId + ", expId=" + this.expId + ", score=" + this.score + ", upload=" + this.upload + ", uploadTime=" + this.uploadTime + ")";
     }
 }

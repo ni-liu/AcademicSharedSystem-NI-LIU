@@ -5,11 +5,11 @@
 <div>
     <ul class="nav navbar-nav">
         <li><a href="../index.jsp">高校课程信息</a></li>
-        <li><a href="../blog.jsp">优质博客内容</a></li>
+        <li><a href="/AcademicSharedSystem/listBlog/list/1">优质博客内容</a></li>
         <li><a href="">个人主页</a></li>
     </ul>
 </div>
 <ul class="nav navbar-nav navbar-right">
-    <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
-    <li><a href="../login.jsp"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-user"></span>注册</a></li>
+    <li><a href="../views/login.jsp"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
 </ul>

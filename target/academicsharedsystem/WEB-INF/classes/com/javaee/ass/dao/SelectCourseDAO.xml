@@ -13,6 +13,14 @@
         <result property="schedule" column="SCHEDULE"/>
     </resultMap>
 
+    <resultMap id="courseBasicParamMap" type="courseBasicParam">
+        <result property="courseId" column="COURSE_ID"/>
+        <result property="courseName" column="COURSE_NAME"/>
+        <result property="teacherId" column="TEACHER_ID"/>
+        <result property="teacherName" column="NAME"/>
+        <result property="coursePic" column="COURSE_PIC"/>
+    </resultMap>
+
     <insert id="insert" parameterType="string" keyProperty="PK_ID" useGeneratedKeys="true">
         INSERT INTO ASS_SELECT_COURSE(STU_ID , COURSE_ID)
         VALUES (#{stuId} , #{courseId})
@@ -36,7 +44,26 @@
         WHERE COURSE_ID = #{courseId}
     </select>
 
-    <select id="listSelectedCourseByStuId" parameterType="string">
-        
+    <select id="listSelectedCourseByStuId" resultMap="courseBasicParamMap">
+        SELECT * FROM
+            (
+                SELECT A.*, ROWNUM RN
+                FROM (SELECT
+                          T1.COURSE_ID , T1.COURSE_NAME , T1.TEACHER_ID , T2.NAME , T1.COURSE_PIC
+                      FROM
+                          (SELECT T11.COURSE_ID, COURSE_NAME, TEACHER_ID, MAJOR_ID, COURSE_PIC, COURSE_OUTLINE_DOWNLOAD, HAS_AGREDD, COURSE_INFO
+                           FROM ASS_COURSE T11 LEFT OUTER JOIN ASS_SELECT_COURSE T12 on T11.COURSE_ID = T12.COURSE_ID WHERE T12.STU_ID = #{stuId})
+                           T1 LEFT OUTER JOIN ASS_TEACHER T2 on T1.TEACHER_ID = T2.PK_ID) A
+                WHERE ROWNUM  &lt;= #{pageNow} * #{pageSize}
+            )
+        WHERE RN &gt;= 1 + (#{pageNow} - 1) * #{pageSize}
     </select>
+
+    <select id="ifSelected" parameterType="string" resultType="int">
+        SELECT COUNT(*)
+        FROM ASS_SELECT_COURSE
+        WHERE STU_ID = #{stuId} AND COURSE_ID = #{courseId}
+    </select>
+
+
 </mapper>

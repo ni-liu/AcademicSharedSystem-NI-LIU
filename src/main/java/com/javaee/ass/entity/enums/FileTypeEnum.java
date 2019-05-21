@@ -5,7 +5,8 @@ public enum FileTypeEnum {
     COURSE_OUTLINES(2) ,
     COURSE_EXPS(3) ,
     COURSE_TEST_PAPERS(4) ,
-    BLOG_ATTACHMENT(5);
+    BLOG_ATTACHMENT(5),
+    BLOG_CONTENT(6);
 
 
     private int type;

@@ -10,11 +10,22 @@ import java.util.Objects;
 @Alias("blogReportDO")
 public class BlogReportDO extends BlogActionDO {
    private int pkId;
+   private String userId;
+   private String blogId;
    private ReportedBlogReasonEnum reason;
    private Date time;
    private ReportedBlogOperationEnum operation;
 
     public BlogReportDO() {
+    }
+
+    public BlogReportDO(int pkId, String userId, String blogId, ReportedBlogReasonEnum reason, Date time, ReportedBlogOperationEnum operation) {
+        this.pkId = pkId;
+        this.userId = userId;
+        this.blogId = blogId;
+        this.reason = reason;
+        this.time = time;
+        this.operation = operation;
     }
 
     public int getPkId() {
@@ -49,6 +60,25 @@ public class BlogReportDO extends BlogActionDO {
         this.operation = operation;
     }
 
+    @Override
+    public String getUserId() {
+        return userId;
+    }
+
+    @Override
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    @Override
+    public String getBlogId() {
+        return blogId;
+    }
+
+    public void setBlogId(String blogId) {
+        this.blogId = blogId;
+    }
+
     public boolean equals(final Object o) {
         if (o == this) return true;
         if (!(o instanceof BlogReportDO)) return false;
@@ -66,9 +96,6 @@ public class BlogReportDO extends BlogActionDO {
         return Objects.equals(this$operation, other$operation);
     }
 
-    protected boolean canEqual(final Object other) {
-        return other instanceof BlogReportDO;
-    }
 
     public int hashCode() {
         final int PRIME = 59;
@@ -83,7 +110,15 @@ public class BlogReportDO extends BlogActionDO {
         return result;
     }
 
+    @Override
     public String toString() {
-        return "BlogReportDO(pkId=" + this.pkId + ", reason=" + this.reason + ", time=" + this.time + ", operation=" + this.operation + ")";
+        return "BlogReportDO{" +
+                "pkId=" + pkId +
+                ", userId='" + userId + '\'' +
+                ", blogId='" + blogId + '\'' +
+                ", reason=" + reason +
+                ", time=" + time +
+                ", operation=" + operation +
+                '}';
     }
 }

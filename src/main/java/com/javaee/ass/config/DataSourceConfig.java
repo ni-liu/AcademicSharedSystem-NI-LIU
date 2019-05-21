@@ -1,24 +1,23 @@
 package com.javaee.ass.config;
 
-import com.javaee.ass.config.property.JDBCProperties;
-import org.apache.commons.dbcp2.BasicDataSource;
-import org.apache.commons.dbcp2.BasicDataSourceFactory;
-import org.mybatis.spring.SqlSessionFactoryBean;
-import org.mybatis.spring.mapper.MapperScannerConfigurer;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
+        import com.javaee.ass.config.property.JDBCProperties;
+        import org.apache.commons.dbcp2.BasicDataSource;
+        import org.apache.commons.dbcp2.BasicDataSourceFactory;
+        import org.mybatis.spring.SqlSessionFactoryBean;
+        import org.mybatis.spring.mapper.MapperScannerConfigurer;
+        import org.springframework.context.annotation.Bean;
+        import org.springframework.context.annotation.Configuration;
+        import org.springframework.core.io.ClassPathResource;
+        import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+        import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.sql.DataSource;
+        import javax.sql.DataSource;
 
-@Configuration
+@Configuration //spring配置文件
 @EnableTransactionManagement
 public class DataSourceConfig {
 
-    @Bean("dataSource")
+    @Bean("dataSource")//spring的容器
     public static DataSource getDataSource() {
         BasicDataSource dataSource = null;
         try {

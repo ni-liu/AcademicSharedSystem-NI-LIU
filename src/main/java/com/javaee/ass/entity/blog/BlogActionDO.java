@@ -8,7 +8,7 @@ import java.util.Objects;
 public class BlogActionDO {
     private int pkId;
     protected String userId;
-    protected int blogId;
+    protected String blogId;
 
     public BlogActionDO() {
     }
@@ -22,7 +22,7 @@ public class BlogActionDO {
         return this.userId;
     }
 
-    public int getBlogId() {
+    public String getBlogId() {
         return this.blogId;
     }
 
@@ -34,7 +34,7 @@ public class BlogActionDO {
         this.userId = userId;
     }
 
-    public void setBlogId(int blogId) {
+    public void setBlogId(String blogId) {
         this.blogId = blogId;
     }
 
@@ -54,14 +54,9 @@ public class BlogActionDO {
         return other instanceof BlogActionDO;
     }
 
+    @Override
     public int hashCode() {
-        final int PRIME = 59;
-        int result = 1;
-        result = result * PRIME + this.pkId;
-        final Object $userId = this.userId;
-        result = result * PRIME + ($userId == null ? 43 : $userId.hashCode());
-        result = result * PRIME + this.blogId;
-        return result;
+        return Objects.hash(pkId, userId, blogId);
     }
 
     public String toString() {

@@ -25,4 +25,10 @@
         FROM ASS_USER
         WHERE PK_ID = #{pkId}
     </select>
+
+    <update id="updateNickName">
+        UPDATE ASS_USER
+        SET NICKNAME = #{newNickName}
+        WHERE PK_ID = #{pkId}
+    </update>
 </mapper>

@@ -3,8 +3,12 @@ package com.javaee.ass.service;
 import com.javaee.ass.dao.SelectCourseDAO;
 import com.javaee.ass.entity.course.SelectCourseDO;
 import com.javaee.ass.entity.enums.ScoreEnum;
+import com.javaee.ass.entity.params.CourseBasicParam;
+import com.javaee.ass.utils.FinalVariablesUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class SelectCourseService {
@@ -81,6 +85,44 @@ public class SelectCourseService {
             ex.printStackTrace();
         }
         return avg;
+    }
+
+    /**
+     * 根据学生号和课程号查询是该学生是否选了该门课
+     * @param stuId 学生好
+     * @param courseId 课程号
+     * @return 选了返回大于0的数 否则返回0
+     */
+    public int ifSelected(String stuId , String courseId) {
+        int row = 0;
+        try {
+            row = selectCourseDAO.ifSelected(stuId , courseId);
+            if (row > 0) {
+                System.out.println(stuId + "选到了" + courseId + "的课");
+            } else {
+                System.out.println(stuId + "没有选到" + courseId + "的课");
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return row;
+    }
+
+    /**
+     * 查询某学生选了哪些课
+     * @param stuId 学生好
+     * @param pageNow 第几页
+     * @return 结果集
+     */
+    public List<CourseBasicParam> listSelectedCoursesByStuId(String stuId , int pageNow) {
+        List<CourseBasicParam> list = null;
+        try {
+            list = selectCourseDAO.listSelectedCourseByStuId(stuId , pageNow , FinalVariablesUtils.COURSE_PAGE_SIZE);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return list;
     }
 
 }

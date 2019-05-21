@@ -8,23 +8,107 @@
         <id property="pkId" column="PK_ID"/>
         <result property="blogTitle" column="BLOG_TITLE"/>
         <result property="userId" column="USER_ID"/>
-        <result property="blogContext" column="BLOG_CONTENT"/>
-        <result property="fileDownload" column="FILE_DOWNLOAD"/>
+        <result property="blogContent" column="BLOG_CONTENT"/>
+        <result property="blogAttachment" column="FILE_DOWNLOAD"/>
         <result property="launchTime" column="LAUNCH_TIME"/>
-        <result property="authority" column="AUTHORITY"/>
+        <result property="authority" column="AUTHORITY"
+                jdbcType="SMALLINT" javaType="com.javaee.ass.entity.enums.BlogAuthorityEnum"
+                typeHandler="com.javaee.ass.entity.typehandler.AuthorityEnumTypeHandler"/>
+        <result property="nickName" column="NICKNAME"/>
+    </resultMap>
+
+    <resultMap id="blogCommentDoMap" type="blogCommentDO">
+        <id property="pkId" column="PK_ID"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="blogId" column="BLOG_ID"/>
+        <result property="comments" column="COMMENTS"/>
+        <result property="nickName" column="NICKNAME"/>
+        <result property="time" column="TIMES"/>
     </resultMap>
 
 
 
-    <select id="searchByBlogTitle" resultMap="blogDOMap" parameterType="String">
-        SELECT B.BLOG_TITLE, B.BLOG_CONTENT, B.LAUNCH_TIME, B.FILE_DOWNLOAD
-        FROM ASS_BLOG B
-        WHERE B.BLOG_TITLE = #{BLOG_TITLE}
+    <insert id="insertBlog">
+        INSERT INTO ASS_BLOG(USER_ID,BLOG_TITLE,BLOG_CONTENT,FILE_DOWNLOAD,LAUNCH_TIME,AUTHORITY)
+            VALUES (#{userId, mode = IN},
+                    #{blogTitle, mode = IN},
+                    #{blogContent, mode = IN},
+                    #{blogAttachment, mode = IN},
+                    to_date(#{launchTime, mode = IN},'yyyy-MM-dd hh24:mi:ss'),
+                    #{authority, mode = IN})
+    </insert>
+
+    <insert id="insertBlogReport">
+        INSERT INTO ASS_REPORT_BLOG(USER_ID, BLOG_ID, REASON, TIME, OPERATE_STATUS)
+            VALUES (#{userId, mode = IN},
+                    #{blogId, mode = IN},
+                    #{reason, mode = IN},
+                    to_date(#{time, mode = IN},'yyyy-MM-dd hh24:mi:ss'),to_number('1'))
+    </insert>
+
+
+    <select id="listBlogByUserNickname" resultMap="blogDOMap">
+        SELECT PK_ID, BLOG_TITLE, USER_ID, BLOG_CONTENT, FILE_DOWNLOAD,LAUNCH_TIME ,AUTHORITY, NICKNAME
+        FROM TABLE(PACK_SELECT.FN_LISTBLOGBYUSERNICKNAME(#{pageNow},#{pageSize},#{nickName}))
+    </select>
+    
+    <select id="ListBlogByBlogTitle" resultMap="blogDOMap">
+        SELECT PK_ID, BLOG_TITLE, USER_ID, BLOG_CONTENT, FILE_DOWNLOAD,LAUNCH_TIME ,AUTHORITY, NICKNAME
+        FROM TABLE(PACK_SELECT.FN_LISTBLOGBYBLOGTITLE(#{pageNow},#{pageSize},#{blogTitle}))
     </select>
 
-    <select id="serchByUserName" resultMap="blogDoMap" parameterType="String">
-
+    <select id="ListOwnBlog" resultMap="blogDOMap">
+        SELECT PK_ID, BLOG_TITLE, USER_ID, BLOG_CONTENT, FILE_DOWNLOAD,LAUNCH_TIME ,AUTHORITY, NICKNAME
+        FROM TABLE(PACK_SELECT.FN_LISTOWNBLOG(#{pageNow},#{pageSize},#{userId}))
     </select>
 
+    <select id="ListAllBlog" resultMap="blogDOMap">
+        SELECT PK_ID, BLOG_TITLE, USER_ID, BLOG_CONTENT, FILE_DOWNLOAD,LAUNCH_TIME ,AUTHORITY, NICKNAME
+        FROM TABLE(PACK_SELECT.FN_LISTALLBLOG(#{pageNow},#{pageSize}))
+    </select>
+
+    <select id="SelectBlogById" resultMap="blogDOMap">
+        SELECT B.PK_ID, B.BLOG_TITLE, B.USER_ID, B.BLOG_CONTENT, B.FILE_DOWNLOAD,B.LAUNCH_TIME ,B.AUTHORITY,U.NICKNAME
+        FROM ASS_BLOG B LEFT JOIN ASS_USER U ON U.PK_ID = B.USER_ID
+        WHERE B.AUTHORITY = 2 AND B.PK_ID = #{blogId}
+    </select>
+
+    <select id="SelectBlogByInfo" resultMap="blogDOMap">
+        SELECT PK_ID, BLOG_TITLE, USER_ID, BLOG_CONTENT, FILE_DOWNLOAD,LT LAUNCH_TIME,AUTHORITY,NICKNAME
+        FROM (
+            SELECT B.PK_ID,B.BLOG_TITLE,B.USER_ID, B.BLOG_CONTENT, B.FILE_DOWNLOAD, B.LT, B.AUTHORITY, B.NICKNAME,ROWNUM RN
+            FROM (SELECT B.PK_ID,B.BLOG_TITLE,B.USER_ID, B.BLOG_CONTENT, B.FILE_DOWNLOAD, TO_CHAR(B.LAUNCH_TIME,'yyyy-MM-dd hh24:mi:ss') LT, B.AUTHORITY, U.NICKNAME
+                FROM ASS_BLOG B LEFT JOIN ASS_USER U ON B.AUTHORITY = 2 AND U.PK_ID = B.USER_ID
+                WHERE B.BLOG_TITLE = #{blogInfo} OR U.NICKNAME = #{blogInfo}) B
+            WHERE ROWNUM &lt; #{pageNow} * #{pageSize} + 1
+            )
+        WHERE RN &gt; (#{pageNow} - 1) * #{pageSize}
+    </select>
+    
+    <select id="SelectBlogCommentByBlogId" resultMap="blogCommentDoMap">
+        SELECT PK_ID,USER_ID, BLOG_ID,  COMMENTS, NICKNAME, TIMES
+        FROM (
+            SELECT CB.PK_ID,CB.BLOG_ID,CB.USER_ID, CB.COMMENTS,CB.TIME TIMES,CB.NICKNAME,ROWNUM RN
+            FROM (SELECT CB.PK_ID,CB.BLOG_ID,CB.USER_ID,CB.COMMENTS,TO_CHAR(CB.TIMES,'yyyy-MM-dd hh24:mi:ss') TIME, U.NICKNAME
+                FROM ASS_COMMENT_BLOG CB LEFT JOIN ASS_USER U ON  U.PK_ID = CB.USER_ID
+                WHERE CB.BLOG_ID = #{blogId}) CB
+            WHERE ROWNUM &lt; #{pageNow} * #{pageSize} + 1
+            )
+        WHERE RN &gt; (#{pageNow} - 1) * #{pageSize}
+    </select>
+
+    <insert id="insertBlogComment">
+        INSERT INTO ASS_COMMENT_BLOG(USER_ID, BLOG_ID, COMMENTS, TIMES)
+            VALUES (
+                #{userId, mode = IN},
+                #{blogId, mode = IN},
+                #{comment, mode = IN},
+                to_date(#{time, mode = IN},'yyyy-MM-dd hh24:mi:ss')
+            )
+    </insert>
+
+    <delete id="deleteByPkId" parameterType="String">
+        CALL PACK_DELETE.PRO_DELETE_BLOG(#{pkId , mode = IN})
+    </delete>
 
 </mapper>

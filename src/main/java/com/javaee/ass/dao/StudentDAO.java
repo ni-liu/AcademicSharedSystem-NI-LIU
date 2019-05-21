@@ -24,7 +24,9 @@ public interface StudentDAO extends GeneralDAO<StudentDO> {
      * @return 调用成功返回true 否则返回false
      */
     @Transactional(propagation = Propagation.REQUIRES_NEW,isolation = Isolation.SERIALIZABLE)
-    boolean insert(@Param("pkId") String pkId , @Param("password") String password ,
-                   @Param("role") short role , @Param("nickname") String nickname ,
-                   @Param("name") String name , @Param("majorId") String majorId);
+    boolean insert(@Param("pkId") String pkId, @Param("password") String password,
+                   @Param("role") short role, @Param("nickname") String nickname,
+                   @Param("name") String name, @Param("majorId") String majorId);
+
+
 }

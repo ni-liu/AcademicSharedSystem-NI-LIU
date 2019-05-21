@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="AcademicSharedSystem:war" />
+      <artifact name="AcademicSharedSystem:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
@@ -29,18 +29,37 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ARU" type="feb32156:DbDataSourceImpl" />
+        <item name="AcademicSharedSystem" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ARU" type="feb32156:DbDataSourceImpl" />
-        <item name="C##ARU: schema" type="3abd1b6a:OraImplModel$Schema" />
+        <item name="AcademicSharedSystem" type="feb32156:DbDataSourceImpl" />
+        <item name="SPIDER_MEN: schema" type="3abd1b6a:OraImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ARU" type="feb32156:DbDataSourceImpl" />
-        <item name="C##ARU: schema" type="3abd1b6a:OraImplModel$Schema" />
+        <item name="AcademicSharedSystem" type="feb32156:DbDataSourceImpl" />
+        <item name="SPIDER_MEN: schema" type="3abd1b6a:OraImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="AcademicSharedSystem" type="feb32156:DbDataSourceImpl" />
+        <item name="SPIDER_MEN: schema" type="3abd1b6a:OraImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ASS_COMMENT_BLOG: table" type="942f455b:OraImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="AcademicSharedSystem" type="feb32156:DbDataSourceImpl" />
+        <item name="SPIDER_MEN: schema" type="3abd1b6a:OraImplModel$Schema" />
+        <item name="routines" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="AcademicSharedSystem" type="feb32156:DbDataSourceImpl" />
+        <item name="SPIDER_MEN: schema" type="3abd1b6a:OraImplModel$Schema" />
+        <item name="sequences" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -49,15 +68,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/Test.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/typehandler/RoleEnumTypeHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="112">
+              <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -65,40 +81,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/utils/OSSOperationUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+            <state relative-caret-position="146">
+              <caret line="236" column="56" selection-start-line="236" selection-start-column="56" selection-end-line="236" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;method#uploadCourseGeneralFile#0;class#OSSOperationUtils#0" />
-                <element signature="docComment;method#transferMultipartFileType#0;class#OSSOperationUtils#0" />
+                <element signature="method#uploadStuExpFiles#0;class#OSSOperationUtils#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/utils/FinalVariablesUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/CourseDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/mybatis-config.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+            <state relative-caret-position="290">
+              <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -108,71 +105,74 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="mybatis-conig" />
         <option value="FxmlFile" />
-        <option value="Enum" />
-        <option value="Jsp File" />
+        <option value="Tag Library Descriptor" />
+        <option value="mybatis-cfg.xml " />
         <option value="Interface" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
+    <option name="SCHEME" value="Project" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/CourseDAO.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6578cb1f-475e-409d-96aa-f5d9944e07bb/console_1.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/enums/FileTypeEnum.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6578cb1f-475e-409d-96aa-f5d9944e07bb/console_2.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/MajorDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/MajorDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/service/MajorService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/enums/ScoreEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/typehandler/ScoreEnumTypeHandler.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6578cb1f-475e-409d-96aa-f5d9944e07bb/console_3.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/service/SelectCourseService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/service/CourseService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/main/coursesListMain.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/sidebar/indexSideBar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/blog.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/sidebar/blogPageSideBar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/main/blogPageMain.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/blog.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/sidebar/loginRegisterSideBar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/sidebar/teacherInfoSideBar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/main/courseInfoTeacherMain.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/main/releaseCourse.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/navbar/navbar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/main/loginMain.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/index-layout.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/courseInfoTeacher.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/main/coursesListMain.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/main/courseInfoTeacherMain.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/TeacherDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/TeacherDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/service/TeacherService.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/UserDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/CourseDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/config/RootConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/service/AdminService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/AdminDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/config/DataSourceConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/SelectCourseDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/SelectCourseDAO.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/releaseCourse.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/index-layout.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/config/WebServletConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/main/releaseCourseMain.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/CourseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/config/RootConfig.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/releaseBlog.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/sidebar/blogContentSidbar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/ListBlogController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/main/releaseBlogMain.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/blog/BlogActionDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/blog/BlogReportDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/enums/ReportedBlogReasonEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/ReleaseBlogController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/typehandler/ReportBlogEnumTypeHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/ReportBlogController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/ReportBlogInfoConstoller.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/blogReport.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/sidebar/blogPageSideBar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/navbar/navbar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/QueryBlogByTitleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/filter/Charfilter.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/blog.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/QueryBlogByInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/ShowBlogContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/utils/Txt2PDF.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/blogComment.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/ReleaseBlogComment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/ShowBlogCommentController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/blogContent.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/BlogDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/service/BlogService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/blog/BlogCommentDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/BlogDAO.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/course/CourseMaterialDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/params/CourseBasicParam.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/utils/FinalVariablesUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/course/CourseDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/enums/FileTypeEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/enums/AgreedEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/enums/ScoreEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/course/SelectCourseDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/enums/RoleEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/role/UserDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/typehandler/ScoreEnumTypeHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/service/SelectCourseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/course/CourseUploadExpDO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/typehandler/RoleEnumTypeHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaee/ass/utils/OSSOperationUtils.java" />
       </list>
     </option>
@@ -180,8 +180,8 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="false" />
-    <option name="FILTER_DEBUG" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
@@ -207,76 +207,146 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="713" />
-    <option name="y" value="80" />
-    <option name="width" value="975" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1026" />
+    <option name="width" value="1080" />
+    <option name="height" value="1064" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="AcademicSharedSystem" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\learning\JavaEE\Design\code\AcademicSharedSystem" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ass" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ass" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ass" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ass" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ass" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ass" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ass" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="role" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ass" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="typehandler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ass" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -286,25 +356,36 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="oracle" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="LombokPluginEnabledInProject" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AcademicSharedSystem" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/enums" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.side.proportion" value="0.40068886" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\learning\JavaEE\Design\code\AcademicSharedSystem\src\main\java\com\javaee\ass" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.javaee.ass.entity.enums" />
+      <recent name="com.javaee.ass.entity.typehandler" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Office Files\Word Files\J2EE 大三下学期\AcademicSharedSystem\src\main\webapp\views\images" />
-      <recent name="E:\Office Files\Word Files\J2EE 大三下学期\AcademicSharedSystem\src\main\webapp" />
-      <recent name="E:\Office Files\Word Files\J2EE 大三下学期\AcademicSharedSystem\src\main\webapp\css" />
-      <recent name="E:\Office Files\Word Files\J2EE 大三下学期\AcademicSharedSystem\lib" />
+      <recent name="D:\learning\JavaEE\Design\code\AcademicSharedSystem\src\main\java\com\javaee\ass\entity\enums" />
+      <recent name="D:\learning\JavaEE\Design\code\AcademicSharedSystem\src\main\webapp\views" />
+      <recent name="D:\learning\JavaEE\Design\code\AcademicSharedSystem\src\main\webapp\views\sidebar" />
+      <recent name="D:\learning\JavaEE\Design\code\AcademicSharedSystem\src\main\webapp\views\main" />
+      <recent name="D:\learning\JavaEE\Design\code\AcademicSharedSystem\src\main\java\com\javaee\ass\service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -323,15 +404,22 @@
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.javaee.ass.Test" />
       <module name="AcademicSharedSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.javaee.ass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.41" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.41" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
-        <artifact name="AcademicSharedSystem:war">
+        <artifact name="AcademicSharedSystem:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/AcademicSharedSystem" />
           </settings>
@@ -396,7 +484,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="AcademicSharedSystem:war" />
+          <artifact name="AcademicSharedSystem:war exploded" />
         </option>
       </method>
     </configuration>
@@ -430,28 +518,57 @@
       <workItem from="1557306316717" duration="267000" />
       <workItem from="1557392063641" duration="4122000" />
       <workItem from="1557473288771" duration="15550000" />
-      <workItem from="1557736341094" duration="7183000" />
-      <workItem from="1557753143026" duration="225000" />
-      <workItem from="1557754162189" duration="637000" />
-      <workItem from="1557821640326" duration="12179000" />
-      <workItem from="1557973781108" duration="14455000" />
-      <workItem from="1558257788419" duration="6320000" />
-      <workItem from="1558339583416" duration="9017000" />
-      <workItem from="1558351768761" duration="1808000" />
-      <workItem from="1558353788007" duration="2007000" />
-      <workItem from="1558362412764" duration="1746000" />
-      <workItem from="1558364261170" duration="115000" />
-      <workItem from="1558398329149" duration="1114000" />
-      <workItem from="1558399574582" duration="4878000" />
-      <workItem from="1558433956653" duration="1334000" />
-      <workItem from="1558435329120" duration="1160000" />
-      <workItem from="1558436553253" duration="509000" />
-      <workItem from="1558439691795" duration="168000" />
+      <workItem from="1557659252339" duration="1090000" />
+      <workItem from="1557748095171" duration="196000" />
+      <workItem from="1557748333332" duration="359000" />
+      <workItem from="1557997077905" duration="3180000" />
+      <workItem from="1558168706015" duration="604000" />
+      <workItem from="1558250724599" duration="33000" />
+      <workItem from="1558251333063" duration="1443000" />
+      <workItem from="1558258053549" duration="3880000" />
+      <workItem from="1558265563767" duration="2191000" />
+      <workItem from="1558318508214" duration="16000" />
+      <workItem from="1558356165214" duration="97000" />
+      <workItem from="1558398581931" duration="273000" />
+      <workItem from="1558400060260" duration="127000" />
+      <workItem from="1558405344670" duration="1751000" />
+      <workItem from="1558425199397" duration="6000" />
+      <workItem from="1558435774504" duration="818000" />
+      <workItem from="1558444619143" duration="33000" />
+      <workItem from="1558506702334" duration="4177000" />
+      <workItem from="1558511719826" duration="1561000" />
+      <workItem from="1558513374399" duration="6743000" />
+      <workItem from="1558525467979" duration="99000" />
+      <workItem from="1558528872560" duration="45000" />
+      <workItem from="1558529135064" duration="82000" />
+      <workItem from="1558588453932" duration="5276000" />
+      <workItem from="1558596621606" duration="4314000" />
+      <workItem from="1558601783106" duration="26000" />
+      <workItem from="1558617640377" duration="7462000" />
+      <workItem from="1558662107935" duration="4106000" />
+      <workItem from="1558671087217" duration="1840000" />
+      <workItem from="1558684809450" duration="365000" />
+      <workItem from="1558752962109" duration="3418000" />
+      <workItem from="1558848825348" duration="8458000" />
+      <workItem from="1558941970810" duration="3395000" />
+      <workItem from="1558945411094" duration="499000" />
+      <workItem from="1558945951217" duration="7385000" />
+      <workItem from="1559299862588" duration="3835000" />
+      <workItem from="1559303727745" duration="1888000" />
+      <workItem from="1559356495454" duration="5350000" />
+      <workItem from="1559376632822" duration="7959000" />
+      <workItem from="1559392325222" duration="1711000" />
+      <workItem from="1559459301581" duration="11382000" />
+      <workItem from="1559482623592" duration="1976000" />
+      <workItem from="1559608234355" duration="8650000" />
+      <workItem from="1559624767060" duration="5591000" />
+      <workItem from="1559635016956" duration="43000" />
+      <workItem from="1559660060450" duration="1891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100794000" />
+    <option name="totallyTimeSpent" value="172236000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -463,10 +580,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23684211" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22922252" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -474,36 +591,38 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="DB Browser" order="8" weight="0.32908848" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32887402" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41137123" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32797858" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.68029493" weight="0.33467203" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955357" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32887402" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32998884" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32931727" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32797858" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.32931727" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32931727" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.27120537" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="15" />
-      <window_info anchor="bottom" id="Database Console" order="16" weight="0.30691963" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.34270415" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32931727" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32931727" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.31361607" />
+      <window_info anchor="bottom" id="DB Execution Console" order="16" />
+      <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.3197051" side_tool="true" weight="0.2580645" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24973147" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24932976" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" weight="0.32975295" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Mongo Explorer" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.19172932" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Database" order="9" weight="0.19705094" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23630504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16286863" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -511,33 +630,35 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="DB Browser" order="8" weight="0.32908848" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32924107" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3125" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32797858" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.68029493" weight="0.44578314" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955357" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32924107" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32931727" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32797858" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.32931727" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32931727" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32924107" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="15" />
-      <window_info anchor="bottom" id="Database Console" order="16" weight="0.30691963" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.27951154" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32931727" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32931727" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.31361607" />
+      <window_info anchor="bottom" id="DB Execution Console" order="16" />
+      <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.3197051" side_tool="true" weight="0.2580645" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24973147" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24932976" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" weight="0.32975295" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Mongo Explorer" order="6" />
-      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.1970999" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Database" order="9" weight="0.19705094" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,335 +669,379 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/main/coursesListMain.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/ReportBlogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="115" column="33" selection-start-line="115" selection-start-column="33" selection-end-line="115" selection-end-column="33" />
+        <state relative-caret-position="330">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="23" />
           <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#2;n#div#2;n#!!top" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/courseInfoTeacher.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/ShowBlogContent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+        <state relative-caret-position="326">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/index-layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+    <entry file="das://9293066b-fae4-42c5-a6fe-d2e1b0f8f31f/schema/SPIDER_MEN/table/ASS_COMMENT_BLOG">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="10cf0fed-f5f5-4fed-bcc2-afb5833ed773">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/main/courseInfoTeacherMain.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/blogComment.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="812">
+          <caret line="29" column="117" selection-start-line="29" selection-start-column="110" selection-end-line="29" selection-end-column="117" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/role/TeacherDO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/ReleaseBlogComment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="756">
+          <caret line="39" column="46" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/TeacherDAO.java" />
-    <entry file="das://6578cb1f-475e-409d-96aa-f5d9944e07bb/schema/C##ARU/table/ASS_USER" />
-    <entry file="file://$PROJECT_DIR$/target/classes/com/javaee/ass/dao/AdminDAO.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/AdminDAO.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/blogContent.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="896">
+          <caret line="32" column="173" selection-start-line="32" selection-start-column="173" selection-end-line="32" selection-end-column="173" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/javaee/ass/config/RootConfig.class" />
-    <entry file="file://$PROJECT_DIR$/target/classes/com/javaee/ass/Test.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/MajorDAO.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/CourseDAO.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/ShowBlogCommentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="58" lean-forward="true" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+        <state relative-caret-position="504">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/UserDAO.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/BlogService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state relative-caret-position="4060">
+          <caret line="161" selection-start-line="161" selection-end-line="161" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#insertBlog#0;class#BlogService#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/blog/BlogCommentDO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="1988">
+          <caret line="102" column="46" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/StudentService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/BlogDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="1232">
+          <caret line="52" column="45" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/SelectCourseService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/BlogDAO.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="484">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/MajorService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/blog/BlogDO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/GeneralDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/MajorDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/StudentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-context/5.1.5.RELEASE/spring-context-5.1.5.RELEASE.jar!/org/springframework/stereotype/Repository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="308">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#BlogDO#0;class#BlogDO#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/AdminDAO.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/StudentDAO.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/course/MajorDO.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/course/CourseMaterialDO.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/params/CourseBasicParam.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/params/StudentBasicParam.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#insert#0;class#AdminDAO#0" />
-          </folding>
+        <state relative-caret-position="140">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/TeacherDAO.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/TeacherService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/config/DataSourceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/config/RootConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/MajorService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/CourseUploadExpService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/StudentService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/CourseMaterialService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/main/courseInfoStudentMain.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/sidebar/adminInfoSideBar.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/courseInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="127" column="21" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#insert#0;class#AdminService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6578cb1f-475e-409d-96aa-f5d9944e07bb/schema/C##ARU/table/ASS_SELECT_COURSE" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/config/WebAppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/SelectCourseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/SelectCourseDAO.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="38" column="64" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
-          <folding>
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/config/property/JDBCProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/bind/annotation/PathVariable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/config/WebServletConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/releaseCourse.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/main/releaseCourseMain.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="10" column="123" selection-start-line="10" selection-start-column="123" selection-end-line="10" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6578cb1f-475e-409d-96aa-f5d9944e07bb/schema/C##ARU/table/ASS_TEACHER" />
-    <entry file="jar://$USER_HOME$/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/javax/servlet/http/HttpServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="254" selection-start-line="254" selection-end-line="254" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/multipart/MultipartFile.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="1082" column="16" selection-start-line="1082" selection-start-column="16" selection-end-line="1082" selection-end-column="16" />
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/CourseService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#listAllByPageNow#0;class#CourseService#0" />
-            <element signature="method#listAllByPageNow#0;class#CourseService#0" />
-            <element signature="docComment;method#searchByPkId#0;class#CourseService#0" />
-            <element signature="docComment;method#insert#0;class#CourseService#0" />
-            <element signature="docComment;method#listRelevantCourseByMajorId#0;class#CourseService#0" />
-            <element signature="method#listRelevantCourseByMajorId#0;class#CourseService#0" />
-            <element signature="docComment;method#listRelevantCourseByTeacherId#0;class#CourseService#0" />
-            <element signature="method#listRelevantCourseByTeacherId#0;class#CourseService#0" />
-            <element signature="docComment;method#listAgreedCourses#0;class#CourseService#0" />
-            <element signature="method#listAgreedCourses#0;class#CourseService#0" />
-          </folding>
+        <state relative-caret-position="280">
+          <caret line="69" column="6" lean-forward="true" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/CourseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="308">
+          <caret line="213" column="76" selection-start-line="213" selection-start-column="76" selection-end-line="213" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/utils/FinalVariablesUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
+        <state relative-caret-position="616">
+          <caret line="22" column="114" selection-start-line="22" selection-start-column="114" selection-end-line="22" selection-end-column="114" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/CourseDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="108">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/ReleaseBlogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1351">
+          <caret line="63" column="42" lean-forward="true" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/typehandler/AgreedEnumTypeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/course/CourseDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1484">
+          <caret line="77" column="29" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+            <element signature="e#1734#1735#0" expanded="true" />
+            <element signature="e#1776#1777#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/enums/FileTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/enums/AgreedEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/enums/ScoreEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding>
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/enums/RoleEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding>
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/role/UserDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/course/SelectCourseDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/typehandler/ScoreEnumTypeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="11" column="61" lean-forward="true" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/service/SelectCourseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="46" column="45" lean-forward="true" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/course/CourseUploadExpDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/entity/typehandler/RoleEnumTypeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/blog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="34" column="90" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/utils/OSSOperationUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="146">
+          <caret line="236" column="56" selection-start-line="236" selection-start-column="56" selection-end-line="236" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#uploadCourseGeneralFile#0;class#OSSOperationUtils#0" />
-            <element signature="docComment;method#transferMultipartFileType#0;class#OSSOperationUtils#0" />
+            <element signature="method#uploadStuExpFiles#0;class#OSSOperationUtils#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mybatis-config.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/sidebar/loginRegisterSideBar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        <state relative-caret-position="252">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -886,11 +1051,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>AcademicSharedSystem:war</last-edited>
+          <last-edited>AcademicSharedSystem:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.40068886" />
               </list>
             </option>
           </splitter-proportions>
@@ -902,7 +1067,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.40068886" />
               </list>
             </option>
           </splitter-proportions>
@@ -914,7 +1079,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.29735935" />
               </list>
             </option>
           </splitter-proportions>
@@ -922,11 +1087,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.29735935" />
               </list>
             </option>
           </splitter-proportions>
@@ -938,8 +1103,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
-                <option value="0.6" />
+                <option value="0.40068886" />
               </list>
             </option>
           </splitter-proportions>
@@ -959,7 +1123,18 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>ojdbc8</last-edited>
+          <last-edited>Maven: com.aliyun.oss:aliyun-sdk-oss:3.4.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.40068886" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -1,7 +1,10 @@
 package com.javaee.ass.utils;
 
 public class FinalVariablesUtils {
+
+    public static final int BLOG_COMMENT_PAGE_SIZE = 10;
     public static final int COURSE_PAGE_SIZE = 8;
+    public static final int COURSE_MATERIAL_PAGE_SIZE = 5;
     public static final String ORACLE_JDBC_DRIVER = "oracle.jdbc.OracleDriver";
     public static final String JDBC_URL = "jdbc:oracle:thin:@localhost:1521:orcl";
     public static final String DB_USER = "C##ARU";
@@ -15,4 +18,7 @@ public class FinalVariablesUtils {
     public static final String OSS_ACCESS_KEY_ID = "LTAIcl4rmogiELkq";
     public static final String OSS_ACCESS_KEY_SECRET = "oVcDZFSoqJb0me5fkMRnvxTpwqjKGE";
     public static final String OSS_BUCKET = "academic-shared-system";
+
+    public static final String TABLE_COURSE_EXPS = "ASS_COURSE_EXP(COURSE_ID, EXP_NAME, DOWNLOAD)";
+    public static final String TABLE_COURSE_TESTPAPER = "ASS_COURSE_TESTPAPER(COURSE_ID , PAPER_NAME , DOWNLOAD)";
 }

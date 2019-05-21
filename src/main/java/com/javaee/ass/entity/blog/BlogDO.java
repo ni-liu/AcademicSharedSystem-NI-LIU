@@ -3,20 +3,32 @@ package com.javaee.ass.entity.blog;
 import com.javaee.ass.entity.enums.BlogAuthorityEnum;
 import org.apache.ibatis.type.Alias;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.Objects;
 
 @Alias("blogDO")
 public class BlogDO {
     private int pkId;
     private String blogTitle;
-    private String blogContent;
-    private String fileDownload;
-    private Date launchTime;
-    private BlogAuthorityEnum authority;
     private String userId;
+    private String blogContent;
+    private String blogAttachment;
+    private String launchTime;
+    private BlogAuthorityEnum authority;
+    private String nickName;
 
     public BlogDO() {
+    }
+
+    public BlogDO(int pkId, String blogTitle, String userId, String blogContent, String blogAttachment, String launchTime, BlogAuthorityEnum authority, String nickName) {
+        this.pkId = pkId;
+        this.blogTitle = blogTitle;
+        this.userId = userId;
+        this.blogContent = blogContent;
+        this.blogAttachment = blogAttachment;
+        this.launchTime = launchTime;
+        this.authority = authority;
+        this.nickName = nickName;
     }
 
     public int getPkId() {
@@ -31,20 +43,16 @@ public class BlogDO {
         return this.blogContent;
     }
 
-    public String getFileDownload() {
-        return this.fileDownload;
+    public String getBlogAttachment() {
+        return this.blogAttachment;
     }
 
-    public Date getLaunchTime() {
+    public String getLaunchTime() {
         return this.launchTime;
     }
 
     public BlogAuthorityEnum getAuthority() {
         return this.authority;
-    }
-
-    public String getUserId() {
-        return this.userId;
     }
 
     public void setPkId(int pkId) {
@@ -59,11 +67,11 @@ public class BlogDO {
         this.blogContent = blogContent;
     }
 
-    public void setFileDownload(String fileDownload) {
-        this.fileDownload = fileDownload;
+    public void setBlogAttachment(String blogAttachment) {
+        this.blogAttachment = blogAttachment;
     }
 
-    public void setLaunchTime(Date launchTime) {
+    public void setLaunchTime(String launchTime) {
         this.launchTime = launchTime;
     }
 
@@ -71,63 +79,58 @@ public class BlogDO {
         this.authority = authority;
     }
 
+    public String getUserId() {
+        return userId;
+    }
+
     public void setUserId(String userId) {
         this.userId = userId;
     }
 
-    public boolean equals(final Object o) {
-        if (o == this) return true;
-        if (!(o instanceof BlogDO)) return false;
-        final BlogDO other = (BlogDO) o;
-        if (!other.canEqual((Object) this)) return false;
-        if (this.pkId != other.pkId) return false;
-        final Object this$blogTitle = this.blogTitle;
-        final Object other$blogTitle = other.blogTitle;
-        if (!Objects.equals(this$blogTitle, other$blogTitle)) return false;
-        final Object this$blogContent = this.blogContent;
-        final Object other$blogContent = other.blogContent;
-        if (!Objects.equals(this$blogContent, other$blogContent))
-            return false;
-        final Object this$fileDownload = this.fileDownload;
-        final Object other$fileDownload = other.fileDownload;
-        if (!Objects.equals(this$fileDownload, other$fileDownload))
-            return false;
-        final Object this$launchTime = this.launchTime;
-        final Object other$launchTime = other.launchTime;
-        if (!Objects.equals(this$launchTime, other$launchTime))
-            return false;
-        final Object this$authority = this.authority;
-        final Object other$authority = other.authority;
-        if (!Objects.equals(this$authority, other$authority)) return false;
-        final Object this$userId = this.userId;
-        final Object other$userId = other.userId;
-        return Objects.equals(this$userId, other$userId);
+    public String getNickName() {
+        return nickName;
     }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
 
     protected boolean canEqual(final Object other) {
         return other instanceof BlogDO;
     }
 
-    public int hashCode() {
-        final int PRIME = 59;
-        int result = 1;
-        result = result * PRIME + this.pkId;
-        final Object $blogTitle = this.blogTitle;
-        result = result * PRIME + ($blogTitle == null ? 43 : $blogTitle.hashCode());
-        final Object $blogContent = this.blogContent;
-        result = result * PRIME + ($blogContent == null ? 43 : $blogContent.hashCode());
-        final Object $fileDownload = this.fileDownload;
-        result = result * PRIME + ($fileDownload == null ? 43 : $fileDownload.hashCode());
-        final Object $launchTime = this.launchTime;
-        result = result * PRIME + ($launchTime == null ? 43 : $launchTime.hashCode());
-        final Object $authority = this.authority;
-        result = result * PRIME + ($authority == null ? 43 : $authority.hashCode());
-        final Object $userId = this.userId;
-        result = result * PRIME + ($userId == null ? 43 : $userId.hashCode());
-        return result;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BlogDO blogDO = (BlogDO) o;
+        return pkId == blogDO.pkId &&
+                Objects.equals(blogTitle, blogDO.blogTitle) &&
+                Objects.equals(userId, blogDO.userId) &&
+                Objects.equals(blogContent, blogDO.blogContent) &&
+                Objects.equals(blogAttachment, blogDO.blogAttachment) &&
+                Objects.equals(launchTime, blogDO.launchTime) &&
+                authority == blogDO.authority &&
+                Objects.equals(nickName, blogDO.nickName);
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(pkId, blogTitle, userId, blogContent, blogAttachment, launchTime, authority, nickName);
+    }
+
+    @Override
     public String toString() {
-        return "BlogDO(pkId=" + this.pkId + ", blogTitle=" + this.blogTitle + ", blogContent=" + this.blogContent + ", fileDownload=" + this.fileDownload + ", launchTime=" + this.launchTime + ", authority=" + this.authority + ", userId=" + this.userId + ")";
+        return "BlogDO{" +
+                "pkId=" + pkId +
+                ", blogTitle='" + blogTitle + '\'' +
+                ", userId='" + userId + '\'' +
+                ", blogContent='" + blogContent + '\'' +
+                ", blogAttachment='" + blogAttachment + '\'' +
+                ", launchTime=" + launchTime +
+                ", authority=" + authority +
+                ", nickName='" + nickName + '\'' +
+                '}';
     }
 }

@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <div id="info-match-search">
     <div class="col-md-6 col-md-offset-1">
         <form class="bs-example bs-example-form" role="form" action="">
@@ -37,67 +39,14 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td><a href="#">Tanmay</a> </td>
-            <td style="text-align: center"><a href="#">Bangalore</a> </td>
-            <td>2019.05.07</td>
-        </tr>
-        <tr>
-            <td><a href="#">Tanmay</a> </td>
-            <td style="text-align: center"><a href="#">Bangalore</a></td>
-            <td>2019.05.07</td>
-        </tr>
-        <tr>
-            <td><a href="#">Tanmay</a> </td>
-            <td style="text-align: center"><a href="#">Bangalore</a></td>
-            <td>2019.05.07</td>
-        </tr>
-        <tr>
-            <td><a href="#">Tanmay</a> </td>
-            <td style="text-align: center"><a href="#">Bangalore</a></td>
-            <td>2019.05.07</td>
-        </tr>
-        <tr>
-            <td><a href="#">Tanmay</a> </td>
-            <td style="text-align: center"><a href="#">Bangalore</a></td>
-            <td>2019.05.07</td>
-        </tr>
-        <tr>
-            <td><a href="#">Tanmay</a> </td>
-            <td style="text-align: center"><a href="#">Bangalore</a></td>
-            <td>2019.05.07</td>
-        </tr>
-        <tr>
-            <td><a href="#">Tanmay</a> </td>
-            <td style="text-align: center"><a href="#">Bangalore</a></td>
-            <td>2019.05.07</td>
-        </tr>
-        <tr>
-            <td><a href="#">Tanmay</a> </td>
-            <td style="text-align: center"><a href="#">Bangalore</a></td>
-            <td>2019.05.07</td>
-        </tr>
-        <tr>
-            <td><a href="#">Tanmay</a> </td>
-            <td style="text-align: center"><a href="#">Bangalore</a></td>
-            <td>2019.05.07</td>
-        </tr>
-        <tr>
-            <td><a href="#">Tanmay</a> </td>
-            <td style="text-align: center"><a href="#">Bangalore</a></td>
-            <td>2019.05.07</td>
-        </tr>
-        <tr>
-            <td><a href="#">Tanmay</a> </td>
-            <td style="text-align: center"><a href="#">Bangalore</a></td>
-            <td>2019.05.07</td>
-        </tr>
-        <tr>
-            <td><a href="#">Tanmay</a> </td>
-            <td style="text-align: center"><a href="#">Bangalore</a></td>
-            <td>2019.05.07</td>
-        </tr>
-        <tr>
+        <c:forEach var="c" items="${}">
+            <tr>
+                <td>${c.BLOG_TITLE}</td>
+                <td>${c.NICKNAME}</td>
+                <td>${c.LAUNCH_TIME}</td>
+            </tr>
+        </c:forEach>
+
         </tbody>
     </table>
 </div>

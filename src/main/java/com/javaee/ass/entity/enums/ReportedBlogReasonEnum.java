@@ -12,20 +12,21 @@ package com.javaee.ass.entity.enums;
  * 8、诈骗信息
  */
 public enum ReportedBlogReasonEnum {
-    REASON_MARKETING(1) ,
-    REASON_YELLOW(2) ,
-    REASON_UNREAL(3) ,
-    REASON_ASSAULT(4) ,
-    REASON_BAD(5) ,
-    REASON_COPY(6) ,
-    REASON_ILLEGAL(7) ,
-    REASON_CHEAT(8);
-
+    REASON_MARKETING(1,"垃圾营销" ) ,
+    REASON_YELLOW(2,"涉黄信息" ) ,
+    REASON_UNREAL(3, "不实消息") ,
+    REASON_ASSAULT(4, "人身攻击") ,
+    REASON_BAD(5, "有害信息") ,
+    REASON_COPY(6, "内容抄袭") ,
+    REASON_ILLEGAL(7,"违法信息") ,
+    REASON_CHEAT(8, "诈骗信息");
 
     private int reasonId;
+    private String reasonType;
 
-    ReportedBlogReasonEnum(int reasonId) {
+    ReportedBlogReasonEnum(int reasonId, String reasonYype) {
         this.reasonId = reasonId;
+        this.reasonType = reasonYype;
     }
 
     public int getReasonId() {
@@ -36,16 +37,24 @@ public enum ReportedBlogReasonEnum {
         this.reasonId = reasonId;
     }
 
-    public static String getReason(int reasonId) {
+    public String getReasonType() {
+        return reasonType;
+    }
+
+    public void setReasonType(String reasonYype) {
+        this.reasonType = reasonYype;
+    }
+
+    public static ReportedBlogReasonEnum getReason(int reasonId) {
         switch (reasonId) {
-            case 1 : return "垃圾营销";
-            case 2 : return "涉黄信息";
-            case 3 : return "不实消息";
-            case 4 : return "人身攻击";
-            case 5 : return "有害信息";
-            case 6 : return "内容抄袭";
-            case 7 : return "违法信息";
-            default: return "诈骗信息";
+            case 1 : return REASON_MARKETING;
+            case 2 : return REASON_YELLOW;
+            case 3 : return REASON_UNREAL;
+            case 4 : return REASON_ASSAULT;
+            case 5 : return REASON_BAD;
+            case 6 : return REASON_COPY;
+            case 7 : return REASON_ILLEGAL;
+            default: return REASON_CHEAT;
         }
     }
 }

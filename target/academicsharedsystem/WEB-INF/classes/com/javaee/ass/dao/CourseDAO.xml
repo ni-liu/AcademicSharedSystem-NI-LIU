@@ -16,6 +16,14 @@
         <result property="courseInfo" column="COURSE_INFO"/>
     </resultMap>
 
+    <resultMap id="courseBasicParamMap" type="courseBasicParam">
+        <result property="courseId" column="COURSE_ID"/>
+        <result property="courseName" column="COURSE_NAME"/>
+        <result property="teacherId" column="TEACHER_ID"/>
+        <result property="teacherName" column="NAME"/>
+        <result property="coursePic" column="COURSE_PIC"/>
+    </resultMap>
+
     <select id="searchByPkId" parameterType="string" resultMap="courseDOMap">
         SELECT
                COURSE_ID, COURSE_NAME, TEACHER_ID, MAJOR_ID, COURSE_PIC, COURSE_OUTLINE_DOWNLOAD, HAS_AGREDD, COURSE_INFO
@@ -39,41 +47,51 @@
             )
     </insert>
 
-    <select id="listCoursesByMajorId" resultMap="courseDOMap">
+    <select id="listCoursesByMajorId" resultMap="courseBasicParamMap">
         SELECT * FROM
             (
                 SELECT A.*, ROWNUM RN
-                FROM (SELECT * FROM ASS_COURSE WHERE MAJOR_ID = #{majorId}) A
+                FROM (SELECT
+                          T1.COURSE_ID , T1.COURSE_NAME , T1.TEACHER_ID , T2.NAME , T1.COURSE_PIC
+                      FROM ASS_COURSE T1 LEFT OUTER JOIN ASS_TEACHER T2 on T1.TEACHER_ID = T2.PK_ID WHERE MAJOR_ID = #{majorId}) A
                 WHERE ROWNUM  &lt;= #{pageNow} * #{pageSize}
             ) as R2
         WHERE RN &gt;= 1 + (#{pageNow} - 1) * #{pageSize}
     </select>
 
-    <select id="listCoursesByTeacherId" resultMap="courseDOMap">
+    <select id="listCoursesByTeacherId" resultMap="courseBasicParamMap">
         SELECT * FROM
             (
                 SELECT A.*, ROWNUM RN
-                FROM (SELECT * FROM ASS_COURSE WHERE TEACHER_ID = #{teacherId}) A
+                FROM (SELECT
+                          T1.COURSE_ID , T1.COURSE_NAME , T1.TEACHER_ID , T2.NAME , T1.COURSE_PIC
+                      FROM ASS_COURSE T1 LEFT OUTER JOIN ASS_TEACHER T2 on T1.TEACHER_ID = T2.PK_ID
+                WHERE T1.TEACHER_ID = #{teacherId}) A
                 WHERE ROWNUM  &lt;= #{pageNow} * #{pageSize}
             )
         WHERE RN &gt;= 1 + (#{pageNow} - 1) * #{pageSize}
     </select>
 
-    <select id="listAgreedCourses" resultMap="courseDOMap">
+    <select id="listAgreedCourses" resultMap="courseBasicParamMap">
         SELECT * FROM
             (
                 SELECT A.*, ROWNUM RN
-                FROM (SELECT * FROM ASS_COURSE WHERE HAS_AGREDD = 3) A
+                FROM (SELECT
+                          T1.COURSE_ID , T1.COURSE_NAME , T1.TEACHER_ID , T2.NAME , T1.COURSE_PIC
+                      FROM ASS_COURSE T1 LEFT OUTER JOIN ASS_TEACHER T2 on T1.TEACHER_ID = T2.PK_ID
+                WHERE T1.HAS_AGREDD = 3) A
                 WHERE ROWNUM  &lt;= #{pageNow} * #{pageSize}
             )
         WHERE RN &gt;= 1 + (#{pageNow} - 1) * #{pageSize}
     </select>
 
-    <select id="listAll" parameterType="int" resultMap="courseDOMap">
+    <select id="listAll" parameterType="int" resultMap="courseBasicParamMap">
         SELECT * FROM
         (
         SELECT A.*, ROWNUM RN
-            FROM (SELECT * FROM ASS_COURSE) A
+            FROM (SELECT
+                         T1.COURSE_ID , T1.COURSE_NAME , T1.TEACHER_ID , T2.NAME , T1.COURSE_PIC
+                  FROM ASS_COURSE T1 LEFT OUTER JOIN ASS_TEACHER T2 on T1.TEACHER_ID = T2.PK_ID) A
         WHERE ROWNUM  &lt;= #{pageNow} * #{pageSize}
         )
         WHERE RN &gt;= 1 + (#{pageNow} - 1) * #{pageSize}

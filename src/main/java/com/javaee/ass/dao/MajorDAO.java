@@ -19,7 +19,7 @@ public interface MajorDAO extends GeneralDAO<MajorDO> {
     boolean deleteByPkId(String pkId);
 
     @Transactional(propagation = Propagation.REQUIRES_NEW,isolation = Isolation.SERIALIZABLE)
-    boolean insert(@Param("pkId") String pkId , @Param("majorName") String majorName);
+    boolean insert(@Param("pkId") String pkId, @Param("majorName") String majorName);
 
     @Transactional(propagation = Propagation.REQUIRES_NEW,isolation = Isolation.SERIALIZABLE)
     List<MajorDO> listAll();

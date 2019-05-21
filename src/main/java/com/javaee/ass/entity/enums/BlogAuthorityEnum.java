@@ -22,4 +22,11 @@ public enum BlogAuthorityEnum {
     public void setAuthority(int authority) {
         this.authority = authority;
     }
+
+    public static BlogAuthorityEnum getAuthority(int roleId) {
+        switch (roleId) {
+            case 1 : return AUTHORITY_PRIVATE;
+            default : return AUTHORITY_PUBLIC;
+        }
+    }
 }
