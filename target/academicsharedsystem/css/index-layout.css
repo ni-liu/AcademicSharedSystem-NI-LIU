@@ -1,0 +1,11 @@
+
+.wrapper {
+    height: 850px;
+}
+.sidebar {
+    width: 100%;
+}
+.main {
+    height: 850px;
+    border: 1px solid #000000;
+}
