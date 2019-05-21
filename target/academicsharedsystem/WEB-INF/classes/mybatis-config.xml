@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!--开启二级缓存-->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+    <!-- 定义别名 扫描包 -->
+    <typeAliases>
+        <package name="com.javaee.ass.entity"/>
+    </typeAliases>
+    
+    <typeHandlers>
+        <package name="com.javaee.ass.entity.typehandler"/>
+    </typeHandlers>
+
+    <!-- 扫描包 -->
+    <mappers>
+        <package name="com.javaee.ass.dao"/>
+    </mappers>
+</configuration>
