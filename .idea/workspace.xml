@@ -53,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="240">
               <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -62,12 +62,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/utils/OSSOperationUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="89" column="9" lean-forward="true" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+            <state relative-caret-position="312">
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="docComment;method#uploadCourseGeneralFile#0;class#OSSOperationUtils#0" />
                 <element signature="docComment;method#transferMultipartFileType#0;class#OSSOperationUtils#0" />
               </folding>
@@ -93,6 +94,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/mybatis-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -106,6 +116,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -211,62 +224,38 @@
         <subPane>
           <expand>
             <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ass" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ass" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ass" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="property" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -274,8 +263,8 @@
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -283,26 +272,11 @@
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AcademicSharedSystem-NI-LIU" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AcademicSharedSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AcademicSharedSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -313,10 +287,11 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="oracle" />
     <property name="LombokPluginEnabledInProject" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="E:/Source Code/AcademicSharedSystem" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AcademicSharedSystem" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -471,11 +446,12 @@
       <workItem from="1558433956653" duration="1334000" />
       <workItem from="1558435329120" duration="1160000" />
       <workItem from="1558436553253" duration="509000" />
+      <workItem from="1558439691795" duration="168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100626000" />
+    <option name="totallyTimeSpent" value="100794000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -742,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://6578cb1f-475e-409d-96aa-f5d9944e07bb/schema/C##ARU/table/ASS_SELECT_COURSE" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/config/WebAppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -784,13 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Source Code/git/AcademicSharedSystem-NI-LIU/src/main/java/com/javaee/ass/utils/FinalVariablesUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -830,13 +792,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="124" selection-start-line="124" selection-end-line="124" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml" />
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/multipart/MultipartFile.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -883,18 +839,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="240">
           <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/CourseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -905,14 +854,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/dao/CourseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/javaee/ass/utils/OSSOperationUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="89" column="9" lean-forward="true" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+        <state relative-caret-position="312">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#uploadCourseGeneralFile#0;class#OSSOperationUtils#0" />
             <element signature="docComment;method#transferMultipartFileType#0;class#OSSOperationUtils#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
         </state>
       </provider>
     </entry>
