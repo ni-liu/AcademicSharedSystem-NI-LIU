@@ -30,7 +30,7 @@
                     <form class="bs-example bs-example-form" action="/AcademicSharedSystem/releaseBlogComment/release" method="get" role="form" >
                         <div class="input-group">
                             <input type="text" class="form-control" name="comment" placeholder="博客评论"/>
-                            <input hidden name="userId" value="1609010001">
+                            <input hidden name="userId" value="${sessionScope.get('loginUser').pkId}">
                             <input hidden name="blogId" value="${blogId}">
                             <input hidden name="blogTitle" value="${blogTitle}">
                             <span class="input-group-btn">

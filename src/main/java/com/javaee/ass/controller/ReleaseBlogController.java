@@ -3,6 +3,7 @@ package com.javaee.ass.controller;
 import com.javaee.ass.entity.blog.BlogDO;
 import com.javaee.ass.entity.enums.BlogAuthorityEnum;
 import com.javaee.ass.entity.enums.FileTypeEnum;
+import com.javaee.ass.entity.role.UserDO;
 import com.javaee.ass.service.BlogService;
 import com.javaee.ass.utils.OSSOperationUtils;
 import com.javaee.ass.utils.Txt2PDF;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
@@ -81,4 +83,15 @@ public class ReleaseBlogController extends HttpServlet {
         }
         return "redirect:/listBlog/list/1";
     }
+
+    @RequestMapping(value = "/toRelease")
+    public String toReleaseBlog(HttpServletRequest request){
+        UserDO userDO = (UserDO) request.getSession().getAttribute("loginUser");
+        if (userDO != null){
+            return "releaseBlog";
+        }else {
+            return "login";
+        }
+    }
+
 }

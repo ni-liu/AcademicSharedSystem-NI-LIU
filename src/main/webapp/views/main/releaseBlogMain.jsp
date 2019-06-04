@@ -9,7 +9,7 @@
 <div class="col-md-12">
     <div class="form-container col-md-8 col-md-offset-2">
         <form class="form-horizontal" action="/AcademicSharedSystem/releaseBlog/add" method="post" enctype="multipart/form-data">
-						<input type="hidden" name="userId" value="1609010001"/>
+						<input type="hidden" name="userId" value="${sessionScope.get('loginUser').pkId}"/>
             <div class="col-md-12 form-group">
                 <label for="inputBlogTitle" class="col-sm-2 control-label" style="padding-right: 10px;padding-left: 10px;" >博客主题(*必填)</label>
                 <div class="col-sm-10">
@@ -20,8 +20,11 @@
             <div class="col-md-12 form-group" style="margin-top: 50px">
                 <label for="inputBlogContent" class="col-sm-2 control-label" style="padding-right: 10px;padding-left: 10px;">博客正文(*必填)</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" id="inputBlogContent" name="blogContent"  rows="15"
-                              placeholder="请填写发布博客的内容"  required></textarea>
+<%--                    <textarea class="form-control" id="inputBlogContent" name="blogContent"  rows="15"--%>
+<%--                              placeholder="请填写发布博客的内容"  required></textarea>--%>
+                    <textarea id="inputBlogContent" name="blogContent" type="text/plain" rows="15">
+                        填写发布的内容
+                    </textarea>
                 </div>
             </div>
             <div class="col-md-12 form-group" style="margin-top: 50px">
@@ -46,3 +49,6 @@
         </form>
     </div>
 </div>
+<script type="text/javascript">
+    UE.getEditor('inputBlogContent');
+</script>

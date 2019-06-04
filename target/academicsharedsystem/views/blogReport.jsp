@@ -33,7 +33,7 @@
             <div class="form-container col-md-6 col-md-offset-4">
                 <form class="form-horizontal" action="/AcademicSharedSystem/reportBlog/report" method="post" enctype="multipart/form-data">
                     <input hidden name="blogId" value="${blogId}"/>
-                    <input hidden name="userId" value="${userId}">
+                    <input hidden name="userId" value="${sessionScope.get('loginUser').pkId}">
                     <div class="col-md-8 col-md-offset-2 form-group">
                         <h3 class="col-sm-2 control-label" style="font-family: 楷体">博客主题:</h3>
                         <h3 class="col-md-2 control-label col-md-offset-3" style="font-family: 楷体">${blogTitle}</h3>

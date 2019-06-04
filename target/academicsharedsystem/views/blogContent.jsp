@@ -29,8 +29,8 @@
     <div class="row">
         <div class="col-md-2 sidebar">
             <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
-                <li><a href="/AcademicSharedSystem/blogComment/show/1?blogTitle=${BlogInfo.blogTitle}&blogId=${BlogInfo.pkId}&userId=${BlogInfo.userId}">评论</a></li>
-                <li><a href="/AcademicSharedSystem/showReportBlog/show?blogTitle=${BlogInfo.blogTitle}&blogId=${BlogInfo.pkId}&userId=${BlogInfo.userId}&nickName=${BlogInfo.nickName}">举报</a></li>
+                <li><a href="/AcademicSharedSystem/blogComment/show/1?blogTitle=${BlogInfo.blogTitle}&blogId=${BlogInfo.pkId}&userId=${sessionScope.get('loginUser').pkId}">评论</a></li>
+                <li><a href="/AcademicSharedSystem/showReportBlog/show?blogTitle=${BlogInfo.blogTitle}&blogId=${BlogInfo.pkId}&userId=${sessionScope.get('loginUser').pkId}&nickName=${BlogInfo.nickName}">举报</a></li>
             </ul>
         </div>
         <div class="col-md-10 main">
@@ -42,8 +42,8 @@
                 <h4>作者：<label>${BlogInfo.nickName}</label></h4>
             </div>
 
-            <div class="col-md-12" >
-                <embed src="${BlogInfo.blogContent}" height="580" width="1000">
+            <div class="col-md-12 col-md-offset-1" >
+                <embed src="${BlogInfo.blogContent}" height="752" width="1000">
             </div>
 
             <div id="blog-attachment" style="margin-top: 10px">

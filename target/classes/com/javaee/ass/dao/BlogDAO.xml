@@ -15,6 +15,7 @@
                 jdbcType="SMALLINT" javaType="com.javaee.ass.entity.enums.BlogAuthorityEnum"
                 typeHandler="com.javaee.ass.entity.typehandler.AuthorityEnumTypeHandler"/>
         <result property="nickName" column="NICKNAME"/>
+        <result property="courseId" column="COURSE_ID"/>
     </resultMap>
 
     <resultMap id="blogCommentDoMap" type="blogCommentDO">
@@ -29,13 +30,14 @@
 
 
     <insert id="insertBlog">
-        INSERT INTO ASS_BLOG(USER_ID,BLOG_TITLE,BLOG_CONTENT,FILE_DOWNLOAD,LAUNCH_TIME,AUTHORITY)
+        INSERT INTO ASS_BLOG(USER_ID,BLOG_TITLE,BLOG_CONTENT,FILE_DOWNLOAD,LAUNCH_TIME,AUTHORITY,COURSE_ID)
             VALUES (#{userId, mode = IN},
                     #{blogTitle, mode = IN},
                     #{blogContent, mode = IN},
                     #{blogAttachment, mode = IN},
                     to_date(#{launchTime, mode = IN},'yyyy-MM-dd hh24:mi:ss'),
-                    #{authority, mode = IN})
+                    #{authority, mode = IN}),
+                    #{courseId, mode = IN}
     </insert>
 
     <insert id="insertBlogReport">

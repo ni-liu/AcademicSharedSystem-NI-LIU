@@ -1,5 +1,6 @@
 package com.javaee.ass.controller;
 
+import com.javaee.ass.entity.role.UserDO;
 import com.javaee.ass.service.BlogService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
@@ -7,8 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -22,21 +25,28 @@ public class ReleaseBlogComment extends HttpServlet {
     }
 
     @RequestMapping(value = "/release", method = RequestMethod.GET)
-    public String releaseBlogComment(@Param("comment") String comment,
+    public String releaseBlogComment(HttpServletRequest request,
+                                     @Param("comment") String comment,
                                      @Param("userId") String userId,
                                      @Param("blogId") String blogId,
-                                     @Param("blogTitle")String blogTitle,
-                                     Model model){
-        SimpleDateFormat df = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");//设置日期格式
-        Date sysTime = new Date();
-        try{
-            blogService.insertBlogComment(userId,blogId,comment,df.format(sysTime));
-            model.addAttribute("blogTitle",blogTitle);
-            model.addAttribute("blogId", blogId);
-            model.addAttribute("userId",userId);
-        }catch (Exception ex){
-            ex.printStackTrace();
+                                     @Param("blogTitle") String blogTitle,
+                                     Model model) {
+        UserDO userDO = (UserDO) request.getSession().getAttribute("loginUser");
+        if (userDO != null) {
+            SimpleDateFormat df = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");//设置日期格式
+            Date sysTime = new Date();
+            try {
+                blogService.insertBlogComment(userId,blogId,comment,df.format(sysTime));
+                model.addAttribute("blogTitle", blogTitle);
+                model.addAttribute("blogId", blogId);
+                model.addAttribute("userId", userId);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+            return "redirect:/blogComment/show/1";
+        } else {
+            return "login";
         }
-        return "redirect:/blogComment/show/1";
+
     }
 }

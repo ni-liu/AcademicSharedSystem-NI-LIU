@@ -16,11 +16,12 @@ public class BlogDO {
     private String launchTime;
     private BlogAuthorityEnum authority;
     private String nickName;
+    private String courseId;
 
     public BlogDO() {
     }
 
-    public BlogDO(int pkId, String blogTitle, String userId, String blogContent, String blogAttachment, String launchTime, BlogAuthorityEnum authority, String nickName) {
+    public BlogDO(int pkId, String blogTitle, String userId, String blogContent, String blogAttachment, String launchTime, BlogAuthorityEnum authority, String nickName, String courseId) {
         this.pkId = pkId;
         this.blogTitle = blogTitle;
         this.userId = userId;
@@ -29,6 +30,7 @@ public class BlogDO {
         this.launchTime = launchTime;
         this.authority = authority;
         this.nickName = nickName;
+        this.courseId = courseId;
     }
 
     public int getPkId() {
@@ -95,10 +97,19 @@ public class BlogDO {
         this.nickName = nickName;
     }
 
+    public String getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
+    }
 
     protected boolean canEqual(final Object other) {
         return other instanceof BlogDO;
     }
+
+
 
     @Override
     public boolean equals(Object o) {
@@ -128,9 +139,10 @@ public class BlogDO {
                 ", userId='" + userId + '\'' +
                 ", blogContent='" + blogContent + '\'' +
                 ", blogAttachment='" + blogAttachment + '\'' +
-                ", launchTime=" + launchTime +
+                ", launchTime='" + launchTime + '\'' +
                 ", authority=" + authority +
                 ", nickName='" + nickName + '\'' +
+                ", courseId='" + courseId + '\'' +
                 '}';
     }
 }
