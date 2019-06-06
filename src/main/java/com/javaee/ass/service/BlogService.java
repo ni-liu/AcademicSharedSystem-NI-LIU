@@ -128,6 +128,18 @@ public class BlogService {
         return list;
     }
 
+    public List<BlogDO> SelecBlogByCourseId(@Param("courseId") String courseId,
+                                            @Param("pageNow") int pageNow,
+                                            @Param("pageSize") int pageSize){
+        List<BlogDO> list= null;
+        try{
+            list = blogDAO.SelecBlogByCourseId(courseId, pageNow, pageSize);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return list;
+    }
+
     /**
      *  通过博客关键信息进行搜索
      * @param blogInfo
@@ -187,7 +199,8 @@ public class BlogService {
               blogDO.getBlogContent(),
               blogDO.getBlogAttachment(),
                     nowTime,
-                    blogDO.getAuthority().getAuthority()
+                    blogDO.getAuthority().getAuthority(),
+                    blogDO.getCourseId()
             );
         }catch (Exception ex){
             ex.printStackTrace();

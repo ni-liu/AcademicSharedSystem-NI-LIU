@@ -36,8 +36,8 @@
                     #{blogContent, mode = IN},
                     #{blogAttachment, mode = IN},
                     to_date(#{launchTime, mode = IN},'yyyy-MM-dd hh24:mi:ss'),
-                    #{authority, mode = IN}),
-                    #{courseId, mode = IN}
+                    #{authority, mode = IN},
+                    #{courseId, mode = IN})
     </insert>
 
     <insert id="insertBlogReport">
@@ -47,7 +47,6 @@
                     #{reason, mode = IN},
                     to_date(#{time, mode = IN},'yyyy-MM-dd hh24:mi:ss'),to_number('1'))
     </insert>
-
 
     <select id="listBlogByUserNickname" resultMap="blogDOMap">
         SELECT PK_ID, BLOG_TITLE, USER_ID, BLOG_CONTENT, FILE_DOWNLOAD,LAUNCH_TIME ,AUTHORITY, NICKNAME
@@ -69,34 +68,24 @@
         FROM TABLE(PACK_SELECT.FN_LISTALLBLOG(#{pageNow},#{pageSize}))
     </select>
 
+    <select id="SelectBlogByInfo" resultMap="blogDOMap">
+        SELECT PK_ID, BLOG_TITLE, USER_ID, BLOG_CONTENT, FILE_DOWNLOAD,LAUNCH_TIME ,AUTHORITY, NICKNAME
+        FROM TABLE(PACK_SELECT.FN_LISTBLOGBYINFO(#{pageNow},#{pageSize},#{blogInfo}))
+    </select>
+
     <select id="SelectBlogById" resultMap="blogDOMap">
         SELECT B.PK_ID, B.BLOG_TITLE, B.USER_ID, B.BLOG_CONTENT, B.FILE_DOWNLOAD,B.LAUNCH_TIME ,B.AUTHORITY,U.NICKNAME
         FROM ASS_BLOG B LEFT JOIN ASS_USER U ON U.PK_ID = B.USER_ID
         WHERE B.AUTHORITY = 2 AND B.PK_ID = #{blogId}
     </select>
 
-    <select id="SelectBlogByInfo" resultMap="blogDOMap">
-        SELECT PK_ID, BLOG_TITLE, USER_ID, BLOG_CONTENT, FILE_DOWNLOAD,LT LAUNCH_TIME,AUTHORITY,NICKNAME
-        FROM (
-            SELECT B.PK_ID,B.BLOG_TITLE,B.USER_ID, B.BLOG_CONTENT, B.FILE_DOWNLOAD, B.LT, B.AUTHORITY, B.NICKNAME,ROWNUM RN
-            FROM (SELECT B.PK_ID,B.BLOG_TITLE,B.USER_ID, B.BLOG_CONTENT, B.FILE_DOWNLOAD, TO_CHAR(B.LAUNCH_TIME,'yyyy-MM-dd hh24:mi:ss') LT, B.AUTHORITY, U.NICKNAME
-                FROM ASS_BLOG B LEFT JOIN ASS_USER U ON B.AUTHORITY = 2 AND U.PK_ID = B.USER_ID
-                WHERE B.BLOG_TITLE = #{blogInfo} OR U.NICKNAME = #{blogInfo}) B
-            WHERE ROWNUM &lt; #{pageNow} * #{pageSize} + 1
-            )
-        WHERE RN &gt; (#{pageNow} - 1) * #{pageSize}
-    </select>
-    
     <select id="SelectBlogCommentByBlogId" resultMap="blogCommentDoMap">
-        SELECT PK_ID,USER_ID, BLOG_ID,  COMMENTS, NICKNAME, TIMES
-        FROM (
-            SELECT CB.PK_ID,CB.BLOG_ID,CB.USER_ID, CB.COMMENTS,CB.TIME TIMES,CB.NICKNAME,ROWNUM RN
-            FROM (SELECT CB.PK_ID,CB.BLOG_ID,CB.USER_ID,CB.COMMENTS,TO_CHAR(CB.TIMES,'yyyy-MM-dd hh24:mi:ss') TIME, U.NICKNAME
-                FROM ASS_COMMENT_BLOG CB LEFT JOIN ASS_USER U ON  U.PK_ID = CB.USER_ID
-                WHERE CB.BLOG_ID = #{blogId}) CB
-            WHERE ROWNUM &lt; #{pageNow} * #{pageSize} + 1
-            )
-        WHERE RN &gt; (#{pageNow} - 1) * #{pageSize}
+        SELECT PK_ID, BLOG_ID, USER_ID, COMMENTS, NICKNAME, TIMES
+        FROM TABLE(PACK_SELECT.FN_LISTBLOGCOMMENTBYID(#{pageNow},#{pageSize},#{blogId}))
+    </select>
+    <select id="SelecBlogByCourseId" resultMap="blogDOMap">
+        SELECT PK_ID, BLOG_TITLE, USER_ID, BLOG_CONTENT, FILE_DOWNLOAD,LAUNCH_TIME ,AUTHORITY, NICKNAME
+        FROM TABLE(PACK_SELECT.FN_LISTBLOGBYCOURSEID(#{pageNow},#{pageSize},#{courseId}));
     </select>
 
     <insert id="insertBlogComment">

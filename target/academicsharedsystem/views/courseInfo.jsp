@@ -27,7 +27,11 @@
     </nav>
     <div class="row">
         <div class="col-md-2 sidebar">
-            <jsp:include page="sidebar/stuInfoSideBar.jsp"/>
+            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                <li><a href="/AcademicSharedSystem/stu/score/1">课程打分</a></li>
+                <li><a href="/AcademicSharedSystem/releaseBlog/toRelease?courseId=${whichCourse.courseId}">发布博客</a></li>
+                <li><a href="#">个人信息管理</a></li>
+            </ul>
         </div>
         <div class="col-md-10 main">
             <!-- CourseContentMain -->

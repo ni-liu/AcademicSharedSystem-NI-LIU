@@ -3,6 +3,7 @@ package com.javaee.ass.dao;
 import com.javaee.ass.entity.blog.BlogCommentDO;
 import com.javaee.ass.entity.blog.BlogDO;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -47,6 +48,10 @@ public interface BlogDAO {
     List<BlogCommentDO> SelectBlogCommentByBlogId(@Param("blogId") String blogId,
                                                   @Param("pageNow") int pageNow,
                                                   @Param("pageSize") int pageSize);
+    @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.SERIALIZABLE)
+    List<BlogDO> SelecBlogByCourseId(@Param("courseId") String courseId,
+                                     @Param("pageNow") int pageNow,
+                                     @Param("pageSize") int pageSize);
 
     @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.SERIALIZABLE)
     boolean insertBlogComment(@Param("userId") String userID, @Param("blogId") String blogId,
@@ -54,8 +59,9 @@ public interface BlogDAO {
 
     @Transactional(propagation = Propagation.REQUIRES_NEW,isolation = Isolation.SERIALIZABLE)
     boolean insertBlog(@Param("userId") String userID, @Param("blogTitle") String blogTitle,
-                       @Param("blogContent") String blogContent,@Param("blogAttachment") String fileDownload,
-                       @Param("launchTime") String launchTimem,@Param("authority") int authority);
+                       @Param("blogContent") String blogContent, @Param("blogAttachment") String fileDownload,
+                       @Param("launchTime") String launchTime, @Param("authority") int authority,
+                       @Param("courseId") String courseId);
 
     boolean insertBlogReport(@Param("userId") String userID, @Param("blogId") String blogID,
                              @Param("reason") int reason, @Param("time") String time);

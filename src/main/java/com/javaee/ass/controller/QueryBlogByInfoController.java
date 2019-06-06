@@ -22,7 +22,7 @@ public class QueryBlogByInfoController extends HttpServlet {
     public QueryBlogByInfoController(BlogService blogService) {
         this.blogService = blogService;
     }
-    @RequestMapping(value = "/query/{pageNow}", method = RequestMethod.GET)
+    @RequestMapping(value = "/query/{pageNow}", method = RequestMethod.POST)
     public String queryBlogByInfo(@Param("blogInfo") String blogInfo,
                                     @PathVariable("pageNow") int pageNow,
                                   Model model){
