@@ -128,12 +128,12 @@ public class BlogService {
         return list;
     }
 
-    public List<BlogDO> SelecBlogByCourseId(@Param("courseId") String courseId,
+    public List<BlogDO> SelectBlogByCourseId(@Param("courseId") String courseId,
                                             @Param("pageNow") int pageNow,
                                             @Param("pageSize") int pageSize){
         List<BlogDO> list= null;
         try{
-            list = blogDAO.SelecBlogByCourseId(courseId, pageNow, pageSize);
+            list = blogDAO.SelectBlogByCourseId(courseId, pageNow, pageSize);
         }catch (Exception ex){
             ex.printStackTrace();
         }

@@ -37,6 +37,15 @@
                             <input type="password" class="form-control" id="inputPassword3" placeholder="请输入您的密码" name="pwd">
                         </div>
                     </div>
+<%--                    <div class="form-group" style="margin-top: 50px">--%>
+<%--                        <label for="inputPassword3" class="col-sm-2 control-label">验证码</label>--%>
+<%--                        <div class="col-sm-10">--%>
+<%--                            <input type="text" class="form-control" placeholder="请输入您的验证码" name="uyzm">--%>
+<%--                        </div>--%>
+<%--                        <div class="col-sm-4">--%>
+<%--                            <img border="0" src="/yzmServlet" height="100px" width="200" />--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <div class="checkbox">

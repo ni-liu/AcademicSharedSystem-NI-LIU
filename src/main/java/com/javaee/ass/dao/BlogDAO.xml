@@ -27,6 +27,19 @@
         <result property="time" column="TIMES"/>
     </resultMap>
 
+    <resultMap id="blogBasicParamMap" type="BlogBasicParam">
+        <id property="pkId" column="PK_ID"/>
+        <result property="blogTitle" column="BLOG_TITLE"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="blogContent" column="BLOG_CONTENT"/>
+        <result property="blogAttachment" column="FILE_DOWNLOAD"/>
+        <result property="launchTime" column="LAUNCH_TIME"/>
+        <result property="authority" column="AUTHORITY"
+                jdbcType="SMALLINT" javaType="com.javaee.ass.entity.enums.BlogAuthorityEnum"
+                typeHandler="com.javaee.ass.entity.typehandler.AuthorityEnumTypeHandler"/>
+        <result property="nickName" column="NICKNAME"/>
+    </resultMap>
+
 
 
     <insert id="insertBlog">
@@ -74,18 +87,19 @@
     </select>
 
     <select id="SelectBlogById" resultMap="blogDOMap">
-        SELECT B.PK_ID, B.BLOG_TITLE, B.USER_ID, B.BLOG_CONTENT, B.FILE_DOWNLOAD,B.LAUNCH_TIME ,B.AUTHORITY,U.NICKNAME
+        SELECT B.PK_ID, B.BLOG_TITLE, B.USER_ID, B.BLOG_CONTENT, B.FILE_DOWNLOAD,B.LAUNCH_TIME, B.AUTHORITY, U.NICKNAME
         FROM ASS_BLOG B LEFT JOIN ASS_USER U ON U.PK_ID = B.USER_ID
-        WHERE B.AUTHORITY = 2 AND B.PK_ID = #{blogId}
+        WHERE B.AUTHORITY = 2 AND B.PK_ID = #{blogId, mode = IN}
     </select>
 
     <select id="SelectBlogCommentByBlogId" resultMap="blogCommentDoMap">
         SELECT PK_ID, BLOG_ID, USER_ID, COMMENTS, NICKNAME, TIMES
         FROM TABLE(PACK_SELECT.FN_LISTBLOGCOMMENTBYID(#{pageNow},#{pageSize},#{blogId}))
     </select>
-    <select id="SelecBlogByCourseId" resultMap="blogDOMap">
+
+    <select id="SelectBlogByCourseId"  resultMap="blogDOMap">
         SELECT PK_ID, BLOG_TITLE, USER_ID, BLOG_CONTENT, FILE_DOWNLOAD,LAUNCH_TIME ,AUTHORITY, NICKNAME
-        FROM TABLE(PACK_SELECT.FN_LISTBLOGBYCOURSEID(#{pageNow},#{pageSize},#{courseId}));
+        FROM TABLE(PACK_SELECT.FN_LISTBLOGBYCOURSEID(#{pageNow},#{pageSize},#{courseId}))
     </select>
 
     <insert id="insertBlogComment">
@@ -98,8 +112,8 @@
             )
     </insert>
 
-    <delete id="deleteByPkId" parameterType="String">
-        CALL PACK_DELETE.PRO_DELETE_BLOG(#{pkId , mode = IN})
+    <delete id="deleteByPkId" statementType="CALLABLE" parameterType="String">
+        {CALL PACK_DELETE.PRO_DELETE_BLOG(#{pkId , mode = IN})}
     </delete>
 
 </mapper>

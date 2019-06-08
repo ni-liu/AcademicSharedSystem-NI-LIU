@@ -30,7 +30,8 @@
         <div class="col-md-2 sidebar">
             <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125" style="font-size: 22px">
                 <li><a href="/AcademicSharedSystem/stu/score/1">课程打分</a></li>
-                <li><a href="/AcademicSharedSystem/releaseBlog/toRelease?courseId=${whichCourse.courseId}">发布博客</a></li>
+                <li><a href="/AcademicSharedSystem/releaseBlog/toRelease?courseId=${whichCourse.courseId}">提交大作业</a></li>
+                <li><a href="/AcademicSharedSystem/listBlog/listCourseId/1?courseId=${whichCourse.courseId}">查看大作业</a></li>
                 <li><a href="#">个人信息管理</a></li>
             </ul>
         </div>

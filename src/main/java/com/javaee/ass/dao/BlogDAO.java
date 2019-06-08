@@ -49,7 +49,7 @@ public interface BlogDAO {
                                                   @Param("pageNow") int pageNow,
                                                   @Param("pageSize") int pageSize);
     @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.SERIALIZABLE)
-    List<BlogDO> SelecBlogByCourseId(@Param("courseId") String courseId,
+    List<BlogDO> SelectBlogByCourseId(@Param("courseId") String courseId,
                                      @Param("pageNow") int pageNow,
                                      @Param("pageSize") int pageSize);
 

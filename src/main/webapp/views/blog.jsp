@@ -78,11 +78,11 @@
                 <ul class="pagination">
                     <li><a href="/AcademicSharedSystem/listBlog/list/1">&laquo;</a></li>
                     <li><a href="/AcademicSharedSystem/listBlog/list/1">1</a></li>
-<%--                    <li><a href="/AcademicSharedSystem/listBlog/list/2">2</a></li>--%>
+                    <li><a href="/AcademicSharedSystem/listBlog/list/2">2</a></li>
 <%--                    <li><a href="/AcademicSharedSystem/listBlog/list/3">3</a></li>--%>
 <%--                    <li><a href="/AcademicSharedSystem/listBlog/list/4">4</a></li>--%>
 <%--                    <li><a href="/AcademicSharedSystem/listBlog/list/5">5</a></li>--%>
-                    <li><a href="/AcademicSharedSystem/listBlog/list/1">&raquo;</a></li>
+                    <li><a href="/AcademicSharedSystem/listBlog/list/2">&raquo;</a></li>
                 </ul>
 
             </div>
