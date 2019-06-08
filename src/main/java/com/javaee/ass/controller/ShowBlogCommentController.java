@@ -27,8 +27,9 @@ public class ShowBlogCommentController extends HttpServlet {
     }
 
     @RequestMapping(value = "/show/{pageNow}", method = RequestMethod.GET)
-    public String showBlogComment(HttpServletRequest request, @Param("blogTitle") String blogTitle, @Param("blogId") String blogId,
-                                  @Param("userId") String userId, @PathVariable("pageNow")int pageNow, Model model
+    public String showBlogComment(HttpServletRequest request, @Param("blogTitle") String blogTitle,
+                                  @Param("blogId") String blogId, @Param("userId") String userId,
+                                  @PathVariable("pageNow")int pageNow,Model model
                                   ){
         UserDO userDO = (UserDO) request.getSession().getAttribute("loginUser");
         if (userDO != null) {

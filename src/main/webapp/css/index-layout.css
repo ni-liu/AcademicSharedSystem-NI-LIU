@@ -1,37 +1,45 @@
 * {
     padding: 0;
     margin:0;
+    font-size: 22px;
 }
 a {
     color: #4e555b;
 }
 .wrapper {
     height: 850px;
+    font-size: 22px;
 }
 .sidebar {
     width: 100%;
+    font-size: 22px;
 }
 .main {
     height: 850px;
+    font-size: 22px;
     /*border: 1px solid #000000;*/
 }
 
 /* main */
 .span-label {
+    font-size: 22px;
     margin-top: 10px;
 }
 
 #info-match-search {
     height: 50px;
-
+    font-size: 22px;
 }
 
 .row-courses-frame {
     margin-top: 50px;
     height: 250px;
+    font-size: 22px;
 }
 .course-info-frame {
     height: 250px;
+    font-size: 22px;
+    font-size: 22px;
 }
 
 .course-pic {
@@ -45,6 +53,7 @@ a {
 .course-brief {
      margin-top: 15px;
     height: 25px;
+    font-size: 22px;
 }
 .pdf_view{
     margin-top: 15px;
@@ -54,8 +63,10 @@ a {
 
 .table-frame {
     margin-top: 40px;
+    font-size: 22px;
 }
 
 .form-container {
     margin-top: 70px;
+    font-size: 22px;
 }

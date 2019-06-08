@@ -18,12 +18,12 @@
 </head>
 <body>
 <div class="container-fluid">
-    <nav class="navbar" role="navigation">
+    <nav class="navbar" role="navigation" style="font-size: 22px">
             <jsp:include page="navbar/navbar.jsp"/>
     </nav>
     <div class="row">
         <div class="col-md-2 sidebar">
-            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125" style="font-size: 22px">
                 <li><a href="/AcademicSharedSystem/course/all/1">全部课程</a></li>
                 <c:if test="${sessionScope.get('loginUser').role.roleId eq 2}">
                     <li><a href="/AcademicSharedSystem/stu/selected/1">已选课程</a></li>
@@ -34,7 +34,7 @@
         </div>
         <div class="col-md-10 main">
             <div id="info-match-search">
-                <div class="col-md-6 col-md-offset-1">
+                <div class="col-md-6 col-md-offset-1" >
                     <form class="bs-example bs-example-form" role="form" action="">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="课程的关键字"/>
@@ -44,7 +44,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" >
                     <div class=" span-label" style="margin-top: 7px;">
                         搜索标签：
                         <a href="#"><span class="label label-info">信息标签</span></a>

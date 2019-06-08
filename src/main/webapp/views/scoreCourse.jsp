@@ -21,17 +21,17 @@
         <jsp:include page="navbar/navbar.jsp"/>
     </nav>
     <div class="row">
-        <div class="col-md-2 sidebar">
+        <div class="col-md-2 sidebar" style="font-size: 22px">
             <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
                 <li><a href="/AcademicSharedSystem/stu/score/1">课程打分</a></li>
                 <li><a href="/AcademicSharedSystem/releaseBlog/toRelease?courseId=${course.courseId}">发布博客</a></li>
                 <li><a href="#">个人信息管理</a></li>
             </ul>
         </div>
-        <div class="col-md-10 main" style="margin-top: 50px">
+        <div class="col-md-10 main" style="margin-top: 50px;font-size: 22px">
             <form method="post" action="">
                 <div class="col-md-12">
-                    <table class="table table-striped table-bordered">
+                    <table class="table table-striped table-bordered" style="font-size: 22px">
                         <thead>
                         <tr>
                             <th style="width: 60%">课程名</th>
@@ -70,7 +70,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div style="text-align: right" class="col-md-12"><strong>注： &nbsp;只能评价一次，不能更改</strong></div>
+                <div style="text-align: right" class="col-md-12" ><strong>注： &nbsp;只能评价一次，不能更改</strong></div>
                 <div style="text-align: center;"><input type="submit" class="btn btn-info" value="提交"></div>
             </form>
             <div class="col-md-6 col-md-offset-3" style="text-align: center;margin-top: 40px">

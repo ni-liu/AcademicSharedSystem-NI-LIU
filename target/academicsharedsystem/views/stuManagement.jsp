@@ -17,17 +17,17 @@
 </head>
 <body>
 <div class="container-fluid">
-    <nav class="navbar" role="navigation">
+    <nav class="navbar" role="navigation" style="font-size: 22px">
         <jsp:include page="navbar/navbar.jsp"/>
     </nav>
     <div class="row">
-        <div class="col-md-2 sidebar">
+        <div class="col-md-2 sidebar" style="font-size: 22px">
             <jsp:include page="sidebar/adminInfoSideBar.jsp"/>
         </div>
-        <div class="col-md-10 main">
+        <div class="col-md-10 main" style="font-size: 22px">
             <!-- 学生信息表格 -->
-            <div class="row col-md-12" id="stu-info-table" style="margin-top: 50px">
-                <table class="table table-hover table-bordered table-striped">
+            <div class="row col-md-12" id="stu-info-table" style="margin-top: 50px;font-size: 22px">
+                <table class="table table-hover table-bordered table-striped" style="font-size: 22px">
                     <thead>
                     <tr>
                         <th style="text-align: center">学生学号</th>
@@ -65,7 +65,7 @@
             </div>
             <!-- 学生信息表格 -->
             <!-- 批量导入 -->
-            <div class="row col-md-12 text-center" id="patch-stu" style="margin-top: 50px">
+            <div class="row col-md-12 text-center" id="patch-stu" style="margin-top: 50px";font-size: 22px">
                 <form class="form-inline" action="/AcademicSharedSystem/admin/patch" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="filePatch">学生批量批量导入</label>

@@ -17,6 +17,7 @@
     <style>
         ul,li{
             list-style: none;
+            font-size: 22px;
         }
     </style>
 </head>
@@ -27,13 +28,13 @@
     </nav>
     <div class="row">
         <div class="col-md-2 sidebar">
-            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125" style="font-size: 22px">
                 <li><a href="/AcademicSharedSystem/stu/score/1">课程打分</a></li>
                 <li><a href="/AcademicSharedSystem/releaseBlog/toRelease?courseId=${whichCourse.courseId}">发布博客</a></li>
                 <li><a href="#">个人信息管理</a></li>
             </ul>
         </div>
-        <div class="col-md-10 main">
+        <div class="col-md-10 main" style="font-size: 22px">
             <!-- CourseContentMain -->
             <div class="col-md-7 col-md-offset-3" id="course-title">
                 <h2>${whichCourse.courseName}(${whichCourse.courseId})</h2>
@@ -59,7 +60,7 @@
 
             </div>
             <!-- 信息 -->
-            <div class="col-md-12">
+            <div class="col-md-12" style="font-size: 22px">
                 <div class="widget-box">
                     <!-- tab title -->
                     <div class="widget-title">
@@ -79,7 +80,7 @@
                     <div class="widget-content tab-content">
                         <!-- 课程信息 -->
                         <div id="tab1" class="tab-pane active">
-                            <pre class="pre-scrollable" style="margin-top: 50px">
+                            <pre class="pre-scrollable" style="margin-top: 50px;font-size: 22px">
                                 <p>课设专业：${majorName}</p>
                                 <p>课程信息：${whichCourse.courseInfo}</p>
                                 <p>其他：<c:choose><c:when test="${whichCourse.hasAgreed.agreed != 3}">普通课程</c:when><c:otherwise>精品课程</c:otherwise></c:choose></p>
@@ -88,7 +89,7 @@
                         <!-- 课程信息 -->
                         <!-- 实验报告 -->
                         <div id="tab2" class="tab-pane">
-                            <div class="widget-box" style="margin-top: 50px">
+                            <div class="widget-box" style="margin-top: 50px;font-size: 22px">
                                 <!-- 上传新的实验 -->
                                 <c:set var="pkId" scope="page" value="${sessionScope.get('loginUser').pkId}"/>
                                 <c:if test="${whichCourse.teacherId eq pkId}">
@@ -111,7 +112,7 @@
                                 <!-- 上传新的实验 -->
                                 <!-- 实验表格 -->
                                 <div class="widget-content nopadding">
-                                    <table class="table table-striped table-bordered">
+                                    <table class="table table-striped table-bordered" style="font-size: 22px">
                                         <thead>
                                         <tr>
                                             <th style="width: 700px">实验报告标题</th>
@@ -150,7 +151,7 @@
                                 <div class="widget-box" style="margin-top: 50px">
                                     <!-- 实验表格 -->
                                     <div class="widget-content nopadding">
-                                        <table class="table table-striped table-bordered">
+                                        <table class="table table-striped table-bordered" style="font-size: 22px">
                                             <thead>
                                             <tr>
                                                 <th style="width: 50%">实验报告标题</th>
@@ -189,7 +190,7 @@
 
                         <!-- 模拟试卷 -->
                         <div id="tab4" class="tab-pane">
-                            <div class="widget-box" style="margin-top: 50px">
+                            <div class="widget-box" style="margin-top: 50px;font-size: 22px">
                                 <!-- 上传新的模拟试卷 -->
                                 <c:if test="${whichCourse.teacherId eq pkId}">
                                     <form class="form-horizontal" action="/AcademicSharedSystem/course/${whichCourse.courseId}/testPaper" style="margin-top: 50px;" method="post" enctype="multipart/form-data">
@@ -211,7 +212,7 @@
                                 <!-- 上传新的模拟试卷 -->
                                 <!-- 模拟试卷表格 -->
                                 <div class="widget-content nopadding">
-                                    <table class="table table-striped table-bordered">
+                                    <table class="table table-striped table-bordered" style="font-size: 22px">
                                         <thead>
                                         <tr>
                                             <th style="width: 700px">模拟试卷标题</th>
@@ -248,7 +249,7 @@
                         <div id="tab5" class="tab-pane">
                             <div class="widget-box" style="margin-top: 50px">
                                 <div class="widget-content nopadding">
-                                    <table class="table table-striped table-bordered">
+                                    <table class="table table-striped table-bordered" style="font-size: 22px">
                                         <thead>
                                         <tr>
                                             <th style="width: 50%">课程大纲</th>

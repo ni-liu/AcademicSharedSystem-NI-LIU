@@ -15,18 +15,18 @@
 </head>
 <body>
 <div class="container-fluid">
-    <nav class="navbar" role="navigation">
+    <nav class="navbar" role="navigation" style="font-size: 22px">
         <jsp:include page="navbar/navbar.jsp"/>
     </nav>
     <div class="row">
-        <div class="col-md-2 sidebar">
+        <div class="col-md-2 sidebar" style="font-size: 22px">
             <jsp:include page="sidebar/loginRegisterSideBar.jsp"/>
         </div>
         <div class="col-md-10 main">
-            <div class="form-container col-md-10 col-md-offset-1">
+            <div class="form-container col-md-10 col-md-offset-1" style="font-size: 22px">
                 <form class="form-horizontal" action="/AcademicSharedSystem/login" method="post">
                     <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+                        <label for="inputEmail3" class="col-sm-2 control-label" >用户名</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputEmail3" placeholder="请输入您的用户名" name="userId">
                         </div>

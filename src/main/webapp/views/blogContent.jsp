@@ -20,6 +20,7 @@
 <style>
     div{
         white-space:nowrap;
+        font-size: 22px;
     }
 </style>
 <div class="container-fluid">
@@ -27,13 +28,13 @@
         <jsp:include page="navbar/navbar.jsp"/>
     </nav>
     <div class="row">
-        <div class="col-md-2 sidebar">
-            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+        <div class="col-md-2 sidebar" >
+            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125" style="font-size: 22px">
                 <li><a href="/AcademicSharedSystem/blogComment/show/1?blogTitle=${BlogInfo.blogTitle}&blogId=${BlogInfo.pkId}&userId=${sessionScope.get('loginUser').pkId}">评论</a></li>
                 <li><a href="/AcademicSharedSystem/showReportBlog/show?blogTitle=${BlogInfo.blogTitle}&blogId=${BlogInfo.pkId}&userId=${sessionScope.get('loginUser').pkId}&nickName=${BlogInfo.nickName}">举报</a></li>
             </ul>
         </div>
-        <div class="col-md-10 main">
+        <div class="col-md-10 main" style="font-size: 22px">
             <div class="col-md-4 col-md-offset-3" id="blog-title">
                 <h2><label>${BlogInfo.blogTitle}</label></h2>
             </div>
@@ -42,8 +43,8 @@
                 <h4>作者：<label>${BlogInfo.nickName}</label></h4>
             </div>
 
-            <div class="col-md-12 col-md-offset-1" >
-                <embed src="${BlogInfo.blogContent}" height="752" width="1000">
+            <div class="col-md-10 col-md-offset-1" >
+                <embed src="${BlogInfo.blogContent}" height="745" width="1000">
             </div>
 
             <div id="blog-attachment" style="margin-top: 10px">

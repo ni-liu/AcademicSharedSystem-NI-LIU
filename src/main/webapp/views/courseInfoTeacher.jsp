@@ -24,7 +24,7 @@
         <jsp:include page="navbar/navbar.jsp"/>
     </nav>
     <div class="row">
-        <div class="col-md-2 sidebar">
+        <div class="col-md-2 sidebar" style="font-size: 22px">
             <jsp:include page="sidebar/teacherInfoSideBar.jsp"/>
         </div>
         <div class="col-md-10 main">

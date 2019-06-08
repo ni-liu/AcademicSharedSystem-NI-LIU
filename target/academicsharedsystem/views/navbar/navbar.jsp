@@ -2,10 +2,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false"%>
 <div class="navbar-header">
-    <a class="navbar-brand" href="#">高校资源管理共享系统</a>
+    <a class="navbar-brand" href="#" style="font-size: 22px">高校资源管理共享系统</a>
 </div>
 <div>
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav" style="font-size: 22px">
         <li><a href="/AcademicSharedSystem/course/all/1">高校课程信息</a></li>
         <li><a href="/AcademicSharedSystem/listBlog/list/1">优质博客内容</a></li>
         <li>
@@ -29,7 +29,7 @@
         </li>
     </ul>
 </div>
-<ul class="nav navbar-nav navbar-right">
+<ul class="nav navbar-nav navbar-right" style="font-size: 22px">
     <li>
         <c:choose>
             <c:when test="${sessionScope.get('loginUser') == null}">

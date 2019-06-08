@@ -28,7 +28,7 @@
             <div id="info-match-search">
                 <div class="col-md-6 col-md-offset-1">
                     <form class="bs-example bs-example-form" action="/AcademicSharedSystem/releaseBlogComment/release" method="get" role="form" >
-                        <div class="input-group">
+                        <div class="input-group" style="font-size: 22px">
                             <input type="text" class="form-control" name="comment" placeholder="博客评论"/>
                             <input hidden name="userId" value="${sessionScope.get('loginUser').pkId}">
                             <input hidden name="blogId" value="${blogId}">
@@ -42,19 +42,19 @@
             </div>
             <div class="col-md-10 col-md-offset-1 table-frame">
                 <label class="text-center" style="font-size: 22px">${blogTitle}</label>
-                <table class="table table-striped table-bordered">
+                <table class="table table-striped table-bordered" style="font-size: 22px">
                     <thead>
                     <tr>
                         <th style="width: 500px;text-align: center">博客评论</th>
-                        <th style="width: 180px;text-align: center">博客作者</th>
+                        <th style="width: 230px;text-align: center">博客作者</th>
                         <th style="text-align: center">评论日期</th>
                     </tr>
                     </thead>
                     <tbody>
                     <c:forEach var="c" items="${listComment}">
                         <tr>
-                            <td>${c.comments}</td>
                             <td>${c.nickName}</td>
+                            <td>${c.comments}</td>
                             <td>${c.time}</td>
                         </tr>
                     </c:forEach>

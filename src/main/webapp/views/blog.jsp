@@ -19,6 +19,7 @@
 <style>
     div{
         white-space:nowrap;
+        font-size: 22px;
     }
 </style>
 <div class="container-fluid">
@@ -29,21 +30,21 @@
         <div class="col-md-2 sidebar">
             <jsp:include page="sidebar/blogPageSideBar.jsp"/>
         </div>
-        <div class="col-md-10 main">
+        <div class="col-md-10 main"  >
             <div id="info-match-search">
                 <div class="col-md-6 col-md-offset-1">
                     <form class="bs-example bs-example-form" action="/AcademicSharedSystem/queryBlog/query/1" method="post" role="form">
-                        <div class="input-group">
+                        <div class="input-group" >
                             <input type="text" name="blogInfo" class="form-control" placeholder="博客的关键字"/>
 <%--                            <input hidden name="pageNow" value="1">--%>
-                            <span class="input-group-btn">
+                            <span class="input-group-btn" >
                                 <input type="submit" class="btn btn-default" value="搜索"/>
                             </span>
                         </div>
                     </form>
                 </div>
                 <div class="col-md-3">
-                    <div class=" span-label">
+                    <div class=" span-label" >
                         搜索标签：
                         <a href="#"><span class="label label-info">信息标签</span></a>
                         <a href="#"><span class="label label-info">信息标签</span></a>
@@ -53,11 +54,11 @@
                 </div>
             </div>
             <div class="col-md-10 col-md-offset-1 table-frame">
-                <table class="table table-striped table-bordered">
+                <table class="table table-striped table-bordered" style="font-size: 22px">
                     <thead>
                     <tr>
                         <th style="width: 500px;text-align: center">博客名称</th>
-                        <th style="width: 180px;text-align: center">发布者</th>
+                        <th style="width: 230px;text-align: center">发布者</th>
                         <th style="text-align: center">发布日期</th>
                     </tr>
                     </thead>

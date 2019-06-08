@@ -50,9 +50,7 @@
                             <div class="col-sm-10" >
                                 <%--                    <textarea class="form-control" id="inputBlogContent" name="blogContent"  rows="15"--%>
                                 <%--                              placeholder="请填写发布博客的内容"  required></textarea>--%>
-                                <textarea class="form-control" id="inputBlogContent" name="blogContent" type="text/plain" rows="15">
-                                    填写发布的内容
-                                </textarea>
+                                <textarea class="form-control" id="inputBlogContent" name="blogContent" type="text/plain" rows="15">请填写发布的内容</textarea>
 <%--                                    <script id="inputBlogContent" name="blogContent" type="text/plain" style="width:770px;height:360px;"  ></script>--%>
 <%--                                    <script type="text/javascript">--%>
 <%--                                        UE.getEditor('inputBlogContent');--%>
